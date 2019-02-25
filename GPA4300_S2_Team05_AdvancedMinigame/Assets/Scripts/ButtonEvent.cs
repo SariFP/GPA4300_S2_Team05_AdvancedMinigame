@@ -12,28 +12,45 @@ public class ButtonEvent : MonoBehaviour
     public float ButtonDown;
     public float PlatformDistance;
 
-    public bool onPlatform;
-    public bool usedOnce;
+    [Header("LerpTry")]
+    public Transform startMark;
+    public Transform endMark;
 
-    private Vector3 originPointButton;
-    private Vector3 originPointPlatform;
-    //public Transform endMark;
+    public float speed = 1.0f;
+
+    private float startTime;
+    private float platformLength;
+
+    private bool onButton;
 
     private void Start()
     {
-        player = GetComponent<PlayerControll>();
+        //player = GetComponent<PlayerControll>();
         player.isGrounded = true;
 
-        onPlatform = false;
+        startTime = Time.time;
+        platformLength = Vector3.Distance(startMark.position, endMark.position);
+    }
+
+    private void Update()
+    {
+        if (onButton)
+        {
+            //Platform.transform.Translate(0, 0, -PlatformDistance);
+                float distCovered = (Time.time - startTime) * speed;
+                float fracPlatform = distCovered / platformLength;
+
+                Platform.transform.position = Vector3.Lerp(startMark.position, endMark.position, fracPlatform);
+        }
     }
 
     private void OnCollisionEnter(Collision button)
     {
         if (button.gameObject.tag == "Player")
         {
-            onPlatform = true;
             transform.Translate(0, -ButtonDown, 0);
-            Platform.transform.Translate(0, 0, - PlatformDistance);
+            //Platform.transform.Translate(0, 0, - PlatformDistance);
+            onButton = true;
         }
     }
 
@@ -41,21 +58,9 @@ public class ButtonEvent : MonoBehaviour
     {
         if (button.gameObject.tag != "Player")
         {
-            onPlatform = false;
             transform.Translate(0, ButtonDown, 0);
-            Platform.transform.Translate(0, 0, PlatformDistance);
+            //Platform.transform.Translate(0, 0, PlatformDistance);
+            onButton = false;
         }
     }
-
-    //private void Update()
-    //{
-    //    if (Platform.transform.position == PlayerLeila.transform.position)
-    //    {
-            
-    //    }
-    //    else if (Platform.transform.position == PlayerDan.transform.position)
-    //    {
-
-    //    }
-    //}
 }
