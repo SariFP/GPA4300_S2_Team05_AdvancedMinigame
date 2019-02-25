@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Clothes : MonoBehaviour {
 
-    public Customizer.Type type;
+    public CustomizeCharacter.Type type;
     public bool hide;
-    public Customizer.Type hides;
+    public CustomizeCharacter.Type hides;
 }
 

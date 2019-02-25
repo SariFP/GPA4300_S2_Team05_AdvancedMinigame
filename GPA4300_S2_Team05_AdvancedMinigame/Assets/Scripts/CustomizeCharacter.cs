@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CustomizeCharacter : MonoBehaviour
 {
+    public string name;
+
     public CharacterSkin[] skin;
     public CharacterClothesTypes[] clothesTypes;
     public Clothes[] CurrentClothes;
