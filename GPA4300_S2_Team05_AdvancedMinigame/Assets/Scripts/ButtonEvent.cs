@@ -23,12 +23,13 @@ public class ButtonEvent : MonoBehaviour
 
     private bool onButton;
 
+    private float t;
+
     private void Start()
     {
         //player = GetComponent<PlayerControll>();
         player.isGrounded = true;
 
-        startTime = Time.time;
         platformLength = Vector3.Distance(startMark.position, endMark.position);
     }
 
@@ -37,10 +38,10 @@ public class ButtonEvent : MonoBehaviour
         if (onButton)
         {
             //Platform.transform.Translate(0, 0, -PlatformDistance);
-                float distCovered = (Time.time - startTime) * speed;
-                float fracPlatform = distCovered / platformLength;
-
-                Platform.transform.position = Vector3.Lerp(startMark.position, endMark.position, fracPlatform);
+            //float distCovered = (Time.time - startTime) * speed;
+            //float fracPlatform = distCovered / platformLength;
+            t += Time.deltaTime * speed;
+            Platform.transform.position = Vector3.Lerp(startMark.position, endMark.position, t);
         }
     }
 
@@ -48,9 +49,11 @@ public class ButtonEvent : MonoBehaviour
     {
         if (button.gameObject.tag == "Player")
         {
+            startTime = Time.time;
             transform.Translate(0, -ButtonDown, 0);
             //Platform.transform.Translate(0, 0, - PlatformDistance);
             onButton = true;
+            t = 0;
         }
     }
 

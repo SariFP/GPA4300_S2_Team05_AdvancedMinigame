@@ -827,7 +827,7 @@ MonoBehaviour:
   PlatformDistance: 5
   startMark: {fileID: 1387338301}
   endMark: {fileID: 912466734}
-  speed: 0.01
+  speed: 0.1
 --- !u!1 &185719888
 GameObject:
   m_ObjectHideFlags: 0
@@ -6486,7 +6486,7 @@ PrefabInstance:
     - target: {fileID: 3339898425922994565, guid: 1c099c3dcb1b8d544a78d9877e5c1d5d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.12
+      value: -10.68
       objectReference: {fileID: 0}
     - target: {fileID: 3339898425922994565, guid: 1c099c3dcb1b8d544a78d9877e5c1d5d,
         type: 3}
@@ -6496,7 +6496,7 @@ PrefabInstance:
     - target: {fileID: 3339898425922994565, guid: 1c099c3dcb1b8d544a78d9877e5c1d5d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.8
+      value: -43.72
       objectReference: {fileID: 0}
     - target: {fileID: 3339898425922994565, guid: 1c099c3dcb1b8d544a78d9877e5c1d5d,
         type: 3}
