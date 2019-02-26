@@ -8,6 +8,10 @@ public class PlayerControll : MonoBehaviour
     public int index;
     Animator anim;
 
+    public GameObject LeilaCam;
+    public GameObject DanCam;
+    public bool camSwitch = false;
+
     public bool isGrounded;
     private bool isMoving;
 
@@ -23,20 +27,23 @@ public class PlayerControll : MonoBehaviour
     {
         if (isGrounded)
         {
-            float xNew = transform.position.x + Input.GetAxis("Horizontal_" + index) * MoveSpeed * Time.deltaTime;
-            float zNew = transform.position.z + Input.GetAxis("Vertical_" + index) * MoveSpeed * Time.deltaTime;
+            float InputX = transform.position.x + Input.GetAxis("Horizontal_" + index) * MoveSpeed * Time.deltaTime;
+            float InputY = transform.position.z + Input.GetAxis("Vertical_" + index) * MoveSpeed * Time.deltaTime;
 
-            transform.position = new Vector3(xNew, transform.position.y, zNew);
+            transform.position = new Vector3(InputX, transform.position.y, InputY);
             //isMoving = true;
         }
 
-        if (isMoving)
+        //if (isMoving && isGrounded)
+        //{
+        //    anim.SetBool("isWalking", isMoving);
+        //}
+
+        if (Input.GetButtonDown("CameraSwitch"))
         {
-            anim.SetBool("isWalking", isMoving);
-        }
-        else
-        {
-            anim.SetTrigger("stopped");
+            camSwitch = !camSwitch;
+            DanCam.SetActive(camSwitch);
+            LeilaCam.SetActive(!camSwitch);
         }
     }
 
@@ -47,4 +54,6 @@ public class PlayerControll : MonoBehaviour
             isGrounded = true;
         }
     }
+
+    
 }

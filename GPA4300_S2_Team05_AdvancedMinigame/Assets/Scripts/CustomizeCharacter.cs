@@ -105,3 +105,11 @@ public class CharacterClothesTypes
     public string name;
     public GameObject[] clothes;
 }
+
+[System.Serializable]
+public class Clothes : MonoBehaviour
+{
+    public CustomizeCharacter.Type type;
+    public bool hide;
+    public CustomizeCharacter.Type hides;
+}

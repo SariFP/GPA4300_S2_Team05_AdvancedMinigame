@@ -37,9 +37,6 @@ public class ButtonEvent : MonoBehaviour
     {
         if (onButton)
         {
-            //Platform.transform.Translate(0, 0, -PlatformDistance);
-            //float distCovered = (Time.time - startTime) * speed;
-            //float fracPlatform = distCovered / platformLength;
             t += Time.deltaTime * speed;
             Platform.transform.position = Vector3.Lerp(startMark.position, endMark.position, t);
         }
@@ -51,7 +48,6 @@ public class ButtonEvent : MonoBehaviour
         {
             startTime = Time.time;
             transform.Translate(0, -ButtonDown, 0);
-            //Platform.transform.Translate(0, 0, - PlatformDistance);
             onButton = true;
             t = 0;
         }
