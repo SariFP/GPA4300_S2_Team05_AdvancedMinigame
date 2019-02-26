@@ -11,7 +11,6 @@ public class PowerUpJump : MonoBehaviour
     public float JumpForce;
     private bool leilaCanJump;
     private bool danCanJump;
-    private bool jumpedOnce = false;
 
     private void OnTriggerEnter(Collider jump)
     {

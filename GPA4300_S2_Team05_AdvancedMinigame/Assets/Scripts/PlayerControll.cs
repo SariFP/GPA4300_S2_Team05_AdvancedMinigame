@@ -13,13 +13,11 @@ public class PlayerControll : MonoBehaviour
     public bool camSwitch = false;
 
     public bool isGrounded;
-    private bool isMoving;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        isMoving = false;
     }
 
     // Update is called once per frame

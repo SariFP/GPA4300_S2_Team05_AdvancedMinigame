@@ -22,7 +22,7 @@ public class ReachGoal : MonoBehaviour
         if (goal.gameObject == PlayerLeila && goal.gameObject == PlayerDan)
         {
             GoalText.text = "2/2";
-            ReachedText.text = "Sie haben ihr Ziel erreicht.";
+            ReachedText.text = "You reached the Goal.";
             SceneManager.LoadScene("SampleScene");
         }
     }
