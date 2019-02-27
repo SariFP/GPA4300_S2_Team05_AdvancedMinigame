@@ -12,14 +12,14 @@ public class ReachGoal : MonoBehaviour
     public Text GoalText;
     public Text ReachedText;
 
-    private void OnCollisionEnter(Collision goal)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (goal.gameObject == PlayerLeila || goal.gameObject == PlayerDan)
+        if (collision.gameObject == PlayerLeila || collision.gameObject == PlayerDan)
         {
             GoalText.text = "1/2";
         }
 
-        if (goal.gameObject == PlayerLeila && goal.gameObject == PlayerDan)
+        if (collision.gameObject == PlayerLeila && collision.gameObject == PlayerDan)
         {
             GoalText.text = "2/2";
             ReachedText.text = "You reached the Goal.";
