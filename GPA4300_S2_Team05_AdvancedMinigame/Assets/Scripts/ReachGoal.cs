@@ -12,18 +12,33 @@ public class ReachGoal : MonoBehaviour
     public Text GoalText;
     public Text ReachedText;
 
-    private void OnCollisionEnter(Collision collision)
+    private bool leilaReachedGoal = false;
+    private bool danReachedGoal = false;
+
+    private void OnCollisionEnter(Collision player)
     {
-        if (collision.gameObject == PlayerLeila || collision.gameObject == PlayerDan)
+        if (player.gameObject == PlayerLeila)
         {
             GoalText.text = "1/2";
+            leilaReachedGoal = true;
+        }
+        else if (player.gameObject == PlayerDan)
+        {
+            GoalText.text = "1/2";
+            danReachedGoal = true;
         }
 
-        if (collision.gameObject == PlayerLeila && collision.gameObject == PlayerDan)
+        if (danReachedGoal && leilaReachedGoal)
         {
             GoalText.text = "2/2";
             ReachedText.text = "You reached the Goal.";
-            SceneManager.LoadScene("SampleScene");
+            StartCoroutine(WaitGoal());
         }
+    }
+
+    IEnumerator WaitGoal()
+    {
+        yield return new WaitForSecondsRealtime(10f);
+        SceneManager.LoadScene("SampleScene");
     }
 }
