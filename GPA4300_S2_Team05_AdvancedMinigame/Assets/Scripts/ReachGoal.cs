@@ -6,11 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class ReachGoal : MonoBehaviour
 {
+    [Header("GameObjects")]
     public GameObject PlayerLeila;
     public GameObject PlayerDan;
+    public GameObject GoalPanel;
 
+    [Header("Texts")]
     public Text GoalText;
     public Text ReachedText;
+
+    [Header("Sounds")]
+    [Range(0, 1)]
+    public float Volume = 1;
+    public AudioClip GoalSound;
+    public AudioClip ClickSound;
 
     private bool leilaReachedGoal = false;
     private bool danReachedGoal = false;
@@ -39,6 +48,21 @@ public class ReachGoal : MonoBehaviour
     IEnumerator WaitGoal()
     {
         yield return new WaitForSecondsRealtime(10f);
+        AudioSource.PlayClipAtPoint(GoalSound, PlayerLeila.transform.position, Volume);
+        AudioSource.PlayClipAtPoint(GoalSound, PlayerDan.transform.position, Volume);
+        GoalPanel.SetActive(true);
+    }
+
+    public void NextLevelButton()
+    {
+        AudioSource.PlayClipAtPoint(ClickSound, PlayerLeila.transform.position, Volume);
+        AudioSource.PlayClipAtPoint(ClickSound, PlayerDan.transform.position, Volume);
         SceneManager.LoadScene("SampleScene");
+    }
+    public void BackToMainMenuButton()
+    {
+        AudioSource.PlayClipAtPoint(ClickSound, PlayerLeila.transform.position, Volume);
+        AudioSource.PlayClipAtPoint(ClickSound, PlayerDan.transform.position, Volume);
+        SceneManager.LoadScene("MainMenu");
     }
 }

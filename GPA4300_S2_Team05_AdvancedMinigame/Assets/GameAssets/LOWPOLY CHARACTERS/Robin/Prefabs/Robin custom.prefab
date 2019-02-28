@@ -1029,9 +1029,9 @@ GameObject:
   m_Component:
   - component: {fileID: 837231636}
   - component: {fileID: 837231637}
-  - component: {fileID: 703995424}
+  - component: {fileID: 5419268532043116554}
   m_Layer: 0
-  m_Name: Robin
+  m_Name: Robin custom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1081,7 +1081,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &703995424
+--- !u!114 &5419268532043116554
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1090,135 +1090,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 837231635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6e69a44630f4924498620d09cacf2d7, type: 3}
+  m_Script: {fileID: 11500000, guid: ec2d56dcda4d7c14da98c21a9cd526ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin:
-  - name: UpperBody
-    skinnedMeshRenderer: {fileID: 1777282561}
-    currentIndex: 0
-  - name: LowerBody
-    skinnedMeshRenderer: {fileID: 110701689}
-    currentIndex: 0
-  - name: Foot
-    skinnedMeshRenderer: {fileID: 1794848481}
-    currentIndex: 0
-  - name: Hand
-    skinnedMeshRenderer: {fileID: 430319688}
-    currentIndex: 0
-  - name: Vest
-    skinnedMeshRenderer: {fileID: 1486039785}
-    currentIndex: 0
-  - name: BackPack
-    skinnedMeshRenderer: {fileID: 1112202800}
-    currentIndex: 0
-  - name: Hair
-    skinnedMeshRenderer: {fileID: 161666059}
-    currentIndex: 0
-  - name: Head
-    skinnedMeshRenderer: {fileID: 1916892658}
-    currentIndex: 0
-  - name: HeadAttachment
-    skinnedMeshRenderer: {fileID: 1293149980}
-    currentIndex: 0
-  - name: Mask
-    skinnedMeshRenderer: {fileID: 1641763348}
-    currentIndex: 0
-  clothesTypes:
-  - name: UpperBody
-    clothes:
-    - {fileID: 1392438387721596913, guid: 66a3c9128f2e4a2428812e3b35a85592, type: 3}
-    - {fileID: 9126583945998274412, guid: 368fa34acc0b2454083816cfc5233fe9, type: 3}
-    - {fileID: 1576023614479687913, guid: d32f26e1a2b13724a9db5ead38ca3974, type: 3}
-    - {fileID: 3609658429950032950, guid: 218695af1bb511c4abb8a919ec33ede4, type: 3}
-    - {fileID: 5339247575828831069, guid: cd2ab0fed6bbbcd4aa63ece88d620e21, type: 3}
-    - {fileID: 2243207258456513798, guid: 35d198012ba8b794cb9bb2bd74a781e0, type: 3}
-    - {fileID: 133603591189667356, guid: 98985dec673cbc64ba403638e1bd5935, type: 3}
-    - {fileID: 2235925298810813356, guid: 1ff3b32c359feea4f96506a369404902, type: 3}
-    - {fileID: 1090084501714935147, guid: 0a1aa217df1e218459a7a5633274ef86, type: 3}
-    - {fileID: 5834697259510654206, guid: 8cfde6d1371ce8d4e87c8b6d9f69cf3a, type: 3}
-    - {fileID: 2279256938224874647, guid: 0089a3bfc771d864ba5469bd4768b45b, type: 3}
-    - {fileID: 3542861067068903310, guid: 6a80c032f9feb3a4c93d7371ad0159a3, type: 3}
-  - name: LowerBody
-    clothes:
-    - {fileID: 1547699502684176762, guid: 742675d5ddf196545850d8ef95108459, type: 3}
-    - {fileID: 8661874092366278349, guid: b5e6b85043965484eb599e922911e74f, type: 3}
-    - {fileID: 3336802009183864707, guid: f359b594567b6064c97be18dd7b32503, type: 3}
-    - {fileID: 5667165066710959516, guid: 937e09b63f3db5a4780ec823785c884d, type: 3}
-    - {fileID: 2722570221900403165, guid: cd7c176ce7f6ecc40bc4d8328d4bad1f, type: 3}
-    - {fileID: 3266579657450382711, guid: 03bb622ad7d5fc0429882aeae9fdc7e8, type: 3}
-    - {fileID: 5933464411598006576, guid: 4e607c36d9be4e747946ac205fe0e2eb, type: 3}
-    - {fileID: 5406641173500042400, guid: 4302d2c88a724214ab62d6ebfd5c5898, type: 3}
-    - {fileID: 6545988846814379944, guid: a2b3f475e533e1145b0a1148958b2f6b, type: 3}
-    - {fileID: 2109470496302979339, guid: 617e189f0c57b7548a3538078e682de8, type: 3}
-    - {fileID: 4880922258833472292, guid: 0cfda01409a46854ab59ee4eb2f1836c, type: 3}
-  - name: Foot
-    clothes:
-    - {fileID: 2658496228285008290, guid: b75828db1fefcab47926bccac5cc5ac8, type: 3}
-    - {fileID: 4917839464590122852, guid: d36e7b9f2c9c7024494cf4ac10619424, type: 3}
-    - {fileID: 4674978251897683624, guid: e8dc5d6d19049a64daebb5ff25c4f161, type: 3}
-    - {fileID: 5119147694344001879, guid: ec916260673e13d4c8b27d149c5ce7e0, type: 3}
-    - {fileID: 2394763645258343041, guid: 9d2cb6eb08ad07b4aae49c07de26dc0d, type: 3}
-    - {fileID: 7785594414243113045, guid: 86d04bd3741f82948a791bdbf51248df, type: 3}
-    - {fileID: 4213039100571560676, guid: 7480b2b07066f3743b8c3517c517d0a0, type: 3}
-    - {fileID: 1218498982516838410, guid: 8738793b6efdccb44981a18e281801dd, type: 3}
-    - {fileID: 6098681855085033589, guid: b873f966101c4ff4bbe1e03fd5b23c6a, type: 3}
-    - {fileID: 1230862361323026215, guid: ff33c83806756534ea574b76f53b873c, type: 3}
-    - {fileID: 8874660155434222635, guid: c0dccde38cfbd024bb7331a5447075c3, type: 3}
-  - name: Hand
-    clothes:
-    - {fileID: 3657443188895476685, guid: f6bc6cc625ab132439fd40421fe21db7, type: 3}
-    - {fileID: 8336609995807403420, guid: 87ee3fe45beb4524d9da335b45637377, type: 3}
-    - {fileID: 8023038084032584749, guid: 66cc12fb267aeb24298c837c08cac524, type: 3}
-    - {fileID: 2803255406209227826, guid: f815a89187c338343a5d06a6741fe5ab, type: 3}
-    - {fileID: 6942277726002829737, guid: 4ca5486890c44684689790bf6c7c6b06, type: 3}
-    - {fileID: 5683914842200785067, guid: 91ed1dbee47a0914c8cbea21412c3d16, type: 3}
-    - {fileID: 5375874460038331147, guid: 51f68828f1eb0b844a627b0bd198ed6a, type: 3}
-    - {fileID: 6347748551965442251, guid: c5c23548bc3466c44bb901709dc58aaa, type: 3}
-    - {fileID: 5917583192907178202, guid: c067ad3666d8b2c4f94f53587c63bf36, type: 3}
-    - {fileID: 7133864325941949714, guid: 98295a8286ec43a45b19f64bdb7769da, type: 3}
-    - {fileID: 6287458577799591960, guid: 8041798adcc231a43ab7126e924ff61f, type: 3}
-  - name: Vest
-    clothes:
-    - {fileID: 1917032246338161984, guid: 87d87d12a02940842956874ab2b00e55, type: 3}
-    - {fileID: 6972566659789435033, guid: 09c8b0b63a8b0134398334750dffc157, type: 3}
-  - name: BackPack
-    clothes:
-    - {fileID: 1348804480026578963, guid: 518e6732ccaf69549a9fe9c672f87727, type: 3}
-    - {fileID: 2144804544608037354, guid: b02f68a39af1d2a4d9fa705e6a6983a5, type: 3}
-    - {fileID: 1738241256673528736, guid: e3baa1058d8c6234c912fe0122f98f6e, type: 3}
-    - {fileID: 4906703641122712448, guid: f5b3645ecf1c15b46bd156e2655ca186, type: 3}
-  - name: Hair
-    clothes:
-    - {fileID: 3836105372812614577, guid: d665bd46b3af91f4986c268675f744a1, type: 3}
-    - {fileID: 4649610655483531837, guid: 1a20b72948b11d941ad529416e8ace0c, type: 3}
-    - {fileID: 2938811341391586435, guid: 032614bcff1107e4586c69f04265a251, type: 3}
-    - {fileID: 6269794669740757037, guid: ed16afae33bec20458d12009d7ecec96, type: 3}
-    - {fileID: 8263525801548196499, guid: d870b9e8ac613a44c83d22a63150defb, type: 3}
-    - {fileID: 7879970176739442642, guid: 435b47885b1bcf446b6b7c041f7e6f5a, type: 3}
-    - {fileID: 2527308841978051246, guid: dbefd9095f0dacd408344542164de897, type: 3}
-    - {fileID: 4294778136684463919, guid: f0b30f73356e3c74081932ed1e816042, type: 3}
-    - {fileID: 5667978967689802295, guid: 69e5d0d69c9a5454cbc20c7746c3d6de, type: 3}
-    - {fileID: 8909709561940703047, guid: 74252cfaa334c9348bf172d43fa181e5, type: 3}
-    - {fileID: 3217436362084623714, guid: f02de053325e4d64d871bcadbb0e813e, type: 3}
-    - {fileID: 8829286742227898042, guid: 792164b6898cafc45ac19da78bbcc164, type: 3}
-    - {fileID: 6153972624197451552, guid: e10eecbc3233363468cce014d7ab3464, type: 3}
-    - {fileID: 6232485271579817590, guid: 42ea6f416691e534ab83d8f61c3ab712, type: 3}
-    - {fileID: 1644061197786554518, guid: a3758136273a2dd4a9d37a87666d96d7, type: 3}
-    - {fileID: 2267572307758470868, guid: cc36038c0298cec4da6c7cbaa0b06e58, type: 3}
-    - {fileID: 3153304449581749458, guid: d4cf600e0af5cc04db0f82c940ffc4a7, type: 3}
-  - name: Head
-    clothes:
-    - {fileID: 7591542175863366344, guid: 33cbf21f9df491e4fb7e2bf6473f23ce, type: 3}
-    - {fileID: 6413346324573862910, guid: e72f01117f471744f8953a015e762396, type: 3}
-  - name: HeadAttachment
-    clothes:
-    - {fileID: 2832785839484437504, guid: d39ded56183bce1429b239a695fbf138, type: 3}
-    - {fileID: 9128830253664626292, guid: 4112c2d5d349e74499361cc0c12c649d, type: 3}
-    - {fileID: 2509738595213636184, guid: 7799c22d1637dc04c9c76c80037375c6, type: 3}
-  - name: Mask
-    clothes:
-    - {fileID: 7123942096066195679, guid: b9a6dcb4cacab9043b74f36863b8033d, type: 3}
+  name: 
+  skin: []
+  clothesTypes: []
+  CurrentClothes: []
 --- !u!1 &839146986
 GameObject:
   m_ObjectHideFlags: 0

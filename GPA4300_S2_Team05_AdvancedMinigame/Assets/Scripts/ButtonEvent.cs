@@ -28,6 +28,7 @@ public class ButtonEvent : MonoBehaviour
     private void Start()
     {
         //player = GetComponent<PlayerControll>();
+        player = GetComponent<PlayerControll>();
         player.isGrounded = true;
 
         platformLength = Vector3.Distance(startMark.position, endMark.position);

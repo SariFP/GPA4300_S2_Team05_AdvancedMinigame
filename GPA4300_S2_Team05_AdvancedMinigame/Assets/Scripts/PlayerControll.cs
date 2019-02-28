@@ -8,16 +8,14 @@ public class PlayerControll : MonoBehaviour
     public int index;
     Animator anim;
 
-    public GameObject LeilaCam;
-    public GameObject DanCam;
-    public bool camSwitch = false;
-
-    public bool isGrounded;
+    /*[HideInInspector]*/ public bool isGrounded;
+    /*[HideInInspector]*/ public bool controllable;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -25,24 +23,21 @@ public class PlayerControll : MonoBehaviour
     {
         if (isGrounded)
         {
-            float InputX = transform.position.x + Input.GetAxis("Horizontal_" + index) * MoveSpeed * Time.deltaTime;
-            float InputY = transform.position.z + Input.GetAxis("Vertical_" + index) * MoveSpeed * Time.deltaTime;
+            controllable = true;
 
-            transform.position = new Vector3(InputX, transform.position.y, InputY);
-            //isMoving = true;
+            if (controllable)
+            {
+                float InputX = transform.position.x + Input.GetAxis("Horizontal_" + index) * MoveSpeed * Time.deltaTime;
+                float InputZ = transform.position.z + Input.GetAxis("Vertical_" + index) * MoveSpeed * Time.deltaTime;
+                //transform.Translate(InputX, 0, InputZ);
+                transform.position = new Vector3(InputX, transform.position.y, InputZ);
+            }
         }
 
         //if (isMoving && isGrounded)
         //{
         //    anim.SetBool("isWalking", isMoving);
         //}
-
-        if (Input.GetButtonDown("CameraSwitch"))
-        {
-            camSwitch = !camSwitch;
-            DanCam.SetActive(camSwitch);
-            LeilaCam.SetActive(!camSwitch);
-        }
     }
 
     private void OnCollisionStay(Collision collision)
@@ -52,6 +47,4 @@ public class PlayerControll : MonoBehaviour
             isGrounded = true;
         }
     }
-
-    
 }
