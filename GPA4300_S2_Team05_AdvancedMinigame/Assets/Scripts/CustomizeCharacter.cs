@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CustomizeCharacter : MonoBehaviour
 {
-    public string name;
+    public new string name;
 
     public CharacterSkin[] skin;
     public CharacterClothesTypes[] clothesTypes;
@@ -78,15 +78,15 @@ public class CustomizeCharacter : MonoBehaviour
 
     public enum Type
     {
+        Hair,
+        Head,
         Torso,
         Legs,
-        Feet,
         Hands,
-        Hair,
-        BackPack,
-        Outer,
-        Head,
+        Feet,
         Eyes,
+        Outer,
+        BackPack,
         Mask,
     }
 }
