@@ -8,7 +8,7 @@ public class CustomizeCharacter : MonoBehaviour
 
     public CharacterSkin[] skin;
     public CharacterClothesTypes[] clothesTypes;
-    public Clothes[] CurrentClothes;
+    public ClothesObject[] CurrentClothes;
 
     public void NextClother(int SkinnedTypeIndex)
     {
@@ -41,19 +41,19 @@ public class CustomizeCharacter : MonoBehaviour
 
     void Start()
     {
-        CurrentClothes = new Clothes[clothesTypes.Length];
+        CurrentClothes = new ClothesObject[clothesTypes.Length];
     }
 
     void AddClothes(GameObject _newClothesGo)
     {
-        Clothes newClothes = _newClothesGo.GetComponent<Clothes>();
+        ClothesObject newClothes = _newClothesGo.GetComponent<ClothesObject>();
         int slotIndex = (int)newClothes.type;
 
         removeClothing(slotIndex);
 
         CurrentClothes[slotIndex] = newClothes;
 
-        if (_newClothesGo.GetComponent<Clothes>().hide == true)
+        if (_newClothesGo.GetComponent<ClothesObject>().hide == true)
         {
             int slotToHide = (int)newClothes.hides;
             HideClothes(slotToHide);
@@ -104,12 +104,4 @@ public class CharacterClothesTypes
 {
     public string name;
     public GameObject[] clothes;
-}
-
-[System.Serializable]
-public class Clothes : MonoBehaviour
-{
-    public CustomizeCharacter.Type type;
-    public bool hide;
-    public CustomizeCharacter.Type hides;
 }

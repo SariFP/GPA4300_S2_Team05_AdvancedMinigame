@@ -30,7 +30,7 @@ public class MainMenuManager : MonoBehaviour
     }
     public void SinglePlayer()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("CustomizeCharacter");
     }
     public void MultiPlayer_Click()
     {

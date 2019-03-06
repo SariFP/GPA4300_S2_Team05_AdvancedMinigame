@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3657443188895476689}
   - component: {fileID: 3657443188895476686}
   - component: {fileID: 3657443188895476687}
-  - component: {fileID: 3657443188895476684}
+  - component: {fileID: 2297903965148156908}
   m_Layer: 0
   m_Name: Robin_Hand_Hand BASE
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3657443188895476684
+--- !u!114 &2297903965148156908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,7 +87,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3657443188895476685}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee358d0456c9ac944860f83f43da6228, type: 3}
+  m_Script: {fileID: 11500000, guid: bae29a4d09401c84ab67c42c1908475a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 4
+  hide: 0
+  hides: 4

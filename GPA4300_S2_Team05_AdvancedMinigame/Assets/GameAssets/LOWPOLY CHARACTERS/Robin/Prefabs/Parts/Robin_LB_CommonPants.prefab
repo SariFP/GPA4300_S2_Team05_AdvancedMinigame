@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6504525857037721558}
   - component: {fileID: 5922205369153093341}
   - component: {fileID: 883485799675725526}
-  - component: {fileID: 5257891917945529858}
+  - component: {fileID: 4731085557538777696}
   m_Layer: 0
   m_Name: Robin_LB_CommonPants
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5257891917945529858
+--- !u!114 &4731085557538777696
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,7 +87,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4880922258833472292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee358d0456c9ac944860f83f43da6228, type: 3}
+  m_Script: {fileID: 11500000, guid: bae29a4d09401c84ab67c42c1908475a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 3
+  hide: 0
+  hides: 3

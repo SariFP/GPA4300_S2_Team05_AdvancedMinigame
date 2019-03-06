@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6838183336980554737}
   - component: {fileID: 4689597753112436603}
   - component: {fileID: 4316889686247155691}
-  - component: {fileID: 6692035107469457886}
+  - component: {fileID: 3071737068840925916}
   m_Layer: 0
   m_Name: Robin_UB_UpperBody BASE
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6692035107469457886
+--- !u!114 &3071737068840925916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,7 +87,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1392438387721596913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee358d0456c9ac944860f83f43da6228, type: 3}
+  m_Script: {fileID: 11500000, guid: bae29a4d09401c84ab67c42c1908475a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 2
+  hide: 0
+  hides: 2

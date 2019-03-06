@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3315474353344329687}
   - component: {fileID: 5405151363497457612}
   - component: {fileID: 4265667435034904144}
-  - component: {fileID: 6867844835262801359}
+  - component: {fileID: 5588857866842281491}
   m_Layer: 0
   m_Name: Robin_Foot_AllStar
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6867844835262801359
+--- !u!114 &5588857866842281491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,7 +87,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2394763645258343041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee358d0456c9ac944860f83f43da6228, type: 3}
+  m_Script: {fileID: 11500000, guid: bae29a4d09401c84ab67c42c1908475a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
+  type: 5
+  hide: 0
+  hides: 5

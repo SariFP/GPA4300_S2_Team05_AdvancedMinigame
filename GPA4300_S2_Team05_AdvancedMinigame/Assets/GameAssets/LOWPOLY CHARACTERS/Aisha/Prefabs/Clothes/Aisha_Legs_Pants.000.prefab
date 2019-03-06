@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6063213731081792636}
   - component: {fileID: 4611137270345961036}
   - component: {fileID: 5996855691155296045}
-  - component: {fileID: 4017639167639094867}
+  - component: {fileID: 3164883942988176242}
   m_Layer: 0
   m_Name: Aisha_Legs_Pants.000
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4017639167639094867
+--- !u!114 &3164883942988176242
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,9 +87,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6444381484501189813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee358d0456c9ac944860f83f43da6228, type: 3}
+  m_Script: {fileID: 11500000, guid: bae29a4d09401c84ab67c42c1908475a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 3
   hide: 0
-  hides: 1
+  hides: 3

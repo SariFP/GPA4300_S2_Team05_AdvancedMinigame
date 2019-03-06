@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9128830253664626288}
   - component: {fileID: 9128830253664626289}
   - component: {fileID: 9128830253664626290}
-  - component: {fileID: 9128830253664626291}
+  - component: {fileID: 396237673144736754}
   m_Layer: 0
   m_Name: Robin_HA_Cap.001
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &9128830253664626291
+--- !u!114 &396237673144736754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,7 +87,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9128830253664626292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee358d0456c9ac944860f83f43da6228, type: 3}
+  m_Script: {fileID: 11500000, guid: bae29a4d09401c84ab67c42c1908475a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 8
+  type: 1
+  hide: 0
+  hides: 1
