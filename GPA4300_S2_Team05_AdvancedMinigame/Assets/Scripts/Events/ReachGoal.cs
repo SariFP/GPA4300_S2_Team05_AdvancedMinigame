@@ -41,15 +41,17 @@ public class ReachGoal : MonoBehaviour
         {
             GoalText.text = "2/2";
             ReachedText.text = "You reached the Goal.";
+            AudioSource.PlayClipAtPoint(GoalSound, PlayerDan.transform.position, Volume);
+            AudioSource.PlayClipAtPoint(GoalSound, PlayerLeila.transform.position, Volume);
             StartCoroutine(WaitGoal());
         }
     }
 
     IEnumerator WaitGoal()
     {
-        yield return new WaitForSecondsRealtime(10f);
-        AudioSource.PlayClipAtPoint(GoalSound, PlayerLeila.transform.position, Volume);
-        AudioSource.PlayClipAtPoint(GoalSound, PlayerDan.transform.position, Volume);
+        yield return new WaitForSecondsRealtime(5f);
+        GoalText.text = "";
+        ReachedText.text = "";
         GoalPanel.SetActive(true);
     }
 

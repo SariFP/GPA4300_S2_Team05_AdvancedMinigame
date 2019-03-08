@@ -12,7 +12,7 @@ public class FallDown : MonoBehaviour
     {
         if (fallDown.gameObject == PlayerLeila || fallDown.gameObject == PlayerDan)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(SceneManager.sceneCount);
         }
     }
 }

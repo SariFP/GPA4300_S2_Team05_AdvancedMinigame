@@ -29,13 +29,10 @@ public class PowerUpJump : MonoBehaviour
         if (leilaCanJump && Input.GetKeyDown(KeyCode.Space))
         {
             PlayerLeila.GetComponent<Rigidbody>().AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
-            Debug.Log("Jumped");
-            //leilaCanJump = false;
         }
         else if (danCanJump && Input.GetKeyDown(KeyCode.Space))
         {
             PlayerDan.GetComponent<Rigidbody>().AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
-            Debug.Log("Jumped");
         }
     }
 }
