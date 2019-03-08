@@ -41,6 +41,11 @@ public class ButtonEvent : MonoBehaviour
             t += Time.deltaTime * speed;
             Platform.transform.position = Vector3.Lerp(startMark.position, endMark.position, t);
         }
+        else if (!onButton)
+        {
+            t += Time.deltaTime * speed;
+            //Platform.transform.position = Vector3.Lerp(endMark.position, startMark.position, t);
+        }
     }
 
     private void OnCollisionEnter(Collision button)
@@ -56,11 +61,9 @@ public class ButtonEvent : MonoBehaviour
 
     private void OnCollisionExit(Collision button)
     {
-        if (button.gameObject.tag != "Player")
-        {
-            transform.Translate(0, ButtonDown, 0);
-            //Platform.transform.Translate(0, 0, PlatformDistance);
-            onButton = false;
-        }
+        Platform.transform.position = Vector3.Lerp(endMark.position, startMark.position, t);
+        startTime = Time.time;
+        onButton = false;
+        t = 0;
     }
 }

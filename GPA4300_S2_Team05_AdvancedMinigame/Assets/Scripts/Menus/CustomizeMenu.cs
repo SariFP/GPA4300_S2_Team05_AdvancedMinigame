@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class CustomizeMenu : MonoBehaviour
 {
+    public MainMenuManager mainMenu;
+
     [Header("CustomizePanels")]
     public GameObject LeilaCustomizer;
     public GameObject DanCustomizer;
@@ -24,6 +26,13 @@ public class CustomizeMenu : MonoBehaviour
 
     public void DanFinishButton()
     {
-        SceneManager.LoadScene("SampleScene");
+        if (mainMenu.singlePlayer == true)
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
+        else if (mainMenu.multiPlayer == true)
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 }

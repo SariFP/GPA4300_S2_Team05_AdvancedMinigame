@@ -11,14 +11,8 @@ public class MainMenuManager : MonoBehaviour
     public GameObject OptionsMenu;
     public GameObject StartOptions;
 
-    //[Header("MainMenu")]
-    //public Button StartButton;
-    //public Button OptionsButton;
-    //public Button QuitButton;
-
-    //[Header("StartOption")]
-    //public Button Singleplayer;
-    //public Button MultiPlayer;
+    [HideInInspector] public bool singlePlayer = false;
+    [HideInInspector] public bool multiPlayer = false;
 
     //[Header("OptionsMenu")]
     //public Slider Volume;
@@ -31,10 +25,12 @@ public class MainMenuManager : MonoBehaviour
     public void SinglePlayer()
     {
         SceneManager.LoadScene("CustomizeCharacter");
+        singlePlayer = true;
     }
-    public void MultiPlayer_Click()
+    public void MultiPlayer()
     {
-
+        SceneManager.LoadScene("CustomizeCharacter");
+        multiPlayer = true;
     }
     
     public void OptionsButton()
