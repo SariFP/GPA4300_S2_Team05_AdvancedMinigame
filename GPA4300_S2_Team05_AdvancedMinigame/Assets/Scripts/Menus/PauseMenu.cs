@@ -58,69 +58,22 @@ public class PauseMenu : MonoBehaviour
 
         if (PausePanel.activeSelf && isPressed)
         {
-            LockStates(true, true, true);
+            //LockStates(true, true, true);
+            PlayerLeila.transform.GetComponent<CameraControll>().enabled = false;
+            PlayerDan.transform.GetComponent<CameraControll>().enabled = false;
+            PlayerLeila.GetComponent<PlayerControll>().controllable = false;
+            PlayerDan.GetComponent<PlayerControll>().controllable = false;
+            ShowCursor(true);
+
         }
         else if (isPressed)
         {
-            LockStates(false, true, true);
-        }
-    }
-
-    public void LockStates(bool LockState, bool Controller, bool CursorVisible)
-    {
-        switch (LockState)
-        {
-            case true:
-                PlayerLeila.transform.GetComponent<CameraControll>().enabled = false;
-                PlayerDan.transform.GetComponent<CameraControll>().enabled = false;
-                if (Controller)
-                {
-                    PlayerLeila.GetComponent<PlayerControll>().controllable = false;
-                    PlayerDan.GetComponent<PlayerControll>().controllable = false;
-                }
-                if (CursorVisible)
-                {
-                    ShowCursor(true);
-                }
-                break;
-            case false:
-                PlayerLeila.transform.GetComponent<CameraControll>().enabled = true;
-                PlayerDan.transform.GetComponent<CameraControll>().enabled = true;
-                if (Controller)
-                {
-                    PlayerLeila.GetComponent<PlayerControll>().controllable = true;
-                    PlayerDan.GetComponent<PlayerControll>().controllable = true;
-                }
-                if (CursorVisible)
-                {
-                    ShowCursor(false);
-                }
-                break;
-        }
-    }
-
-    public void Unpause()
-    {
-        if (PausePanel.activeSelf)
-        {
-            PausePanel.SetActive(false);
-        }
-        LockStates(false, true, true);
-        isPaused = false;
-    }
-
-    public void ShowCursor(bool state)
-    {
-        switch (state)
-        {
-            case true:
-                Cursor.visible = (true);
-                Cursor.lockState = CursorLockMode.None;
-                break;
-            case false:
-                Cursor.visible = (false);
-                Cursor.lockState = CursorLockMode.Locked;
-                break;
+            //LockStates(false, true, true);
+            PlayerLeila.transform.GetComponent<CameraControll>().enabled = true;
+            PlayerDan.transform.GetComponent<CameraControll>().enabled = true;
+            PlayerLeila.GetComponent<PlayerControll>().controllable = false;
+            PlayerDan.GetComponent<PlayerControll>().controllable = false;
+            ShowCursor(true);
         }
     }
 
@@ -153,4 +106,63 @@ public class PauseMenu : MonoBehaviour
         AudioSource.PlayClipAtPoint(ClickSound, PlayerLeila.transform.position, Volume);
         AudioSource.PlayClipAtPoint(ClickSound, PlayerDan.transform.position, Volume);
     }
+
+    //public void LockStates(bool LockState, bool Controller, bool CursorVisible)
+    //{
+    //    switch (LockState)
+    //    {
+    //        case true:
+    //            PlayerLeila.transform.GetComponent<CameraControll>().enabled = false;
+    //            PlayerDan.transform.GetComponent<CameraControll>().enabled = false;
+    //            if (Controller)
+    //            {
+    //                PlayerLeila.GetComponent<PlayerControll>().controllable = false;
+    //                PlayerDan.GetComponent<PlayerControll>().controllable = false;
+    //            }
+    //            if (CursorVisible)
+    //            {
+    //                ShowCursor(true);
+    //            }
+    //            break;
+    //        case false:
+    //            PlayerLeila.transform.GetComponent<CameraControll>().enabled = true;
+    //            PlayerDan.transform.GetComponent<CameraControll>().enabled = true;
+    //            if (Controller)
+    //            {
+    //                PlayerLeila.GetComponent<PlayerControll>().controllable = true;
+    //                PlayerDan.GetComponent<PlayerControll>().controllable = true;
+    //            }
+    //            if (CursorVisible)
+    //            {
+    //                ShowCursor(false);
+    //            }
+    //            break;
+    //    }
+    //}
+
+    public void Unpause()
+    {
+        if (PausePanel.activeSelf)
+        {
+            PausePanel.SetActive(false);
+        }
+        //LockStates(false, true, true);
+        isPaused = false;
+    }
+
+    public void ShowCursor(bool state)
+    {
+        switch (state)
+        {
+            case true:
+                Cursor.visible = (true);
+                Cursor.lockState = CursorLockMode.None;
+                break;
+            case false:
+                Cursor.visible = (false);
+                Cursor.lockState = CursorLockMode.Locked;
+                break;
+        }
+    }
+
 }

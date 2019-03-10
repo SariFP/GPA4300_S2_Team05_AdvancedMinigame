@@ -503,7 +503,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1796270548}
-        m_MethodName: QuitButton_Click
+        m_MethodName: QuitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -632,7 +632,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1796270548}
-        m_MethodName: OptionsButton_Click
+        m_MethodName: OptionsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -800,7 +800,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1796270548}
-        m_MethodName: MultiPlayer_Click
+        m_MethodName: MultiPlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1044,7 +1044,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1796270548}
-        m_MethodName: BackToMainMenu_Click
+        m_MethodName: BackToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1816,7 +1816,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1796270548}
-        m_MethodName: SinglePlayer_Click
+        m_MethodName: SinglePlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2231,7 +2231,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1796270548}
-        m_MethodName: StartButton_Click
+        m_MethodName: StartButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2484,6 +2484,8 @@ MonoBehaviour:
   MainMenu: {fileID: 1536551738}
   OptionsMenu: {fileID: 486271164}
   StartOptions: {fileID: 1206045709}
+  singlePlayer: 0
+  multiPlayer: 0
 --- !u!1 &1803069835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,7 +2640,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1796270548}
-        m_MethodName: BackToMainMenu_Click
+        m_MethodName: BackToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

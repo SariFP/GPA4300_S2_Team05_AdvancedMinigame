@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CustomizeMenu : MonoBehaviour
 {
-    public MainMenuManager mainMenu;
+    [HideInInspector] public MainMenuManager mainMenu;
 
     [Header("CustomizePanels")]
     public GameObject LeilaCustomizer;

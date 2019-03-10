@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ReachGoal : MonoBehaviour
 {
+    [HideInInspector] public PlayerControll playerCntrl;
+
     [Header("GameObjects")]
     public GameObject PlayerLeila;
     public GameObject PlayerDan;
@@ -43,23 +45,18 @@ public class ReachGoal : MonoBehaviour
             ReachedText.text = "You reached the Goal.";
             AudioSource.PlayClipAtPoint(GoalSound, PlayerDan.transform.position, Volume);
             AudioSource.PlayClipAtPoint(GoalSound, PlayerLeila.transform.position, Volume);
-            StartCoroutine(WaitGoal());
+            GoalPanel.SetActive(true);
+            //playerCntrl.controllable = false;
+            Cursor.visible = (true);
+            Cursor.lockState = CursorLockMode.None;
         }
-    }
-
-    IEnumerator WaitGoal()
-    {
-        yield return new WaitForSecondsRealtime(5f);
-        GoalText.text = "";
-        ReachedText.text = "";
-        GoalPanel.SetActive(true);
     }
 
     public void NextLevelButton()
     {
         AudioSource.PlayClipAtPoint(ClickSound, PlayerLeila.transform.position, Volume);
         AudioSource.PlayClipAtPoint(ClickSound, PlayerDan.transform.position, Volume);
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneManager.sceneCount + 1);
     }
     public void BackToMainMenuButton()
     {

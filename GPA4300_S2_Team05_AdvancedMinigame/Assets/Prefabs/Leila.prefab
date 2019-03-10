@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1418996556}
   - component: {fileID: 1418996557}
   - component: {fileID: 1418996553}
-  - component: {fileID: 1418996558}
   m_Layer: 0
   m_Name: Leila
   m_TagString: Player
@@ -128,21 +127,6 @@ MonoBehaviour:
   index: 1
   isGrounded: 0
   controllable: 0
---- !u!114 &1418996558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418996552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5455b8cf1884afb408073a391704ac31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LeilaCam: {fileID: 0}
-  DanCam: {fileID: 0}
-  camSwitch: 0
 --- !u!1 &49881519413892667
 GameObject:
   m_ObjectHideFlags: 0
