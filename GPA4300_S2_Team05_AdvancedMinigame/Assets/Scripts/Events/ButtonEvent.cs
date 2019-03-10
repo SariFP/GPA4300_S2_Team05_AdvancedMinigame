@@ -10,7 +10,6 @@ public class ButtonEvent : MonoBehaviour
     public GameObject PlayerDan;
 
     public float ButtonDown;
-    public float PlatformDistance;
 
     [Header("LerpTry")]
     public Transform startMark;
@@ -28,7 +27,8 @@ public class ButtonEvent : MonoBehaviour
     private void Start()
     {
         //player = GetComponent<PlayerControll>();
-        player = GetComponent<PlayerControll>();
+        player = PlayerLeila.GetComponent<PlayerControll>();
+        player = PlayerDan.GetComponent<PlayerControll>();
         player.isGrounded = true;
 
         platformLength = Vector3.Distance(startMark.position, endMark.position);

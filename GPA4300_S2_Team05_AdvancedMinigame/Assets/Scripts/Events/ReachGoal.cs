@@ -46,6 +46,7 @@ public class ReachGoal : MonoBehaviour
             AudioSource.PlayClipAtPoint(GoalSound, PlayerDan.transform.position, Volume);
             AudioSource.PlayClipAtPoint(GoalSound, PlayerLeila.transform.position, Volume);
             GoalPanel.SetActive(true);
+            Time.timeScale = 0;
             //playerCntrl.controllable = false;
             Cursor.visible = (true);
             Cursor.lockState = CursorLockMode.None;
