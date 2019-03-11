@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ButtonEvent : MonoBehaviour
 {
-    [HideInInspector]public PlayerControll player;
     public GameObject Platform;
     public GameObject PlayerLeila;
     public GameObject PlayerDan;
@@ -18,7 +17,6 @@ public class ButtonEvent : MonoBehaviour
     public float speed = 1.0f;
 
     private float startTime;
-    private float platformLength;
 
     private bool onButton;
 
@@ -26,12 +24,8 @@ public class ButtonEvent : MonoBehaviour
 
     private void Start()
     {
-        //player = GetComponent<PlayerControll>();
-        player = PlayerLeila.GetComponent<PlayerControll>();
-        player = PlayerDan.GetComponent<PlayerControll>();
-        player.isGrounded = true;
-
-        platformLength = Vector3.Distance(startMark.position, endMark.position);
+        PlayerLeila.GetComponent<PlayerControll>().isGrounded = true;
+        PlayerDan.GetComponent<PlayerControll>().isGrounded = true;
     }
 
     private void Update()

@@ -14,21 +14,29 @@ public class MainMenuManager : MonoBehaviour
     [HideInInspector] public bool singlePlayer = false;
     [HideInInspector] public bool multiPlayer = false;
 
+    [Header("Sounds")]
+    [Range(0, 1)]
+    public float Volume = 1;
+    public AudioClip ClickSound;
+
     //[Header("OptionsMenu")]
     //public Slider Volume;
 
     public void StartButton()
     {
-        MainMenu.SetActive(false);
         StartOptions.SetActive(true);
+        AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
+        MainMenu.SetActive(false);
     }
     public void SinglePlayer()
     {
+        AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         SceneManager.LoadScene("CustomizeCharacter");
         singlePlayer = true;
     }
     public void MultiPlayer()
     {
+        AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         SceneManager.LoadScene("CustomizeCharacter");
         multiPlayer = true;
     }
@@ -36,11 +44,13 @@ public class MainMenuManager : MonoBehaviour
     public void OptionsButton()
     {
         MainMenu.SetActive(false);
+        AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         OptionsMenu.SetActive(true);
     }
 
     public void QuitButton()
     {
+        AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         Application.Quit();
     }
 
@@ -48,6 +58,7 @@ public class MainMenuManager : MonoBehaviour
     {
         OptionsMenu.SetActive(false);
         StartOptions.SetActive(false);
+        AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         MainMenu.SetActive(true);
     }
 

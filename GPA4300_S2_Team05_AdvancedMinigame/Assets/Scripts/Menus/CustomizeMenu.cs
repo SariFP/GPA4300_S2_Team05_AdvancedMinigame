@@ -12,6 +12,11 @@ public class CustomizeMenu : MonoBehaviour
     public GameObject LeilaCustomizer;
     public GameObject DanCustomizer;
 
+    [Header("Sounds")]
+    [Range(0, 1)]
+    public float Volume = 1;
+    public AudioClip ClickSound;
+
     private void Start()
     {
         LeilaCustomizer.SetActive(true);
@@ -21,11 +26,13 @@ public class CustomizeMenu : MonoBehaviour
     public void LeilaFinishButton()
     {
         LeilaCustomizer.SetActive(false);
+        AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         DanCustomizer.SetActive(true);
     }
 
     public void DanFinishButton()
     {
+        AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         if (mainMenu.singlePlayer == true)
         {
             SceneManager.LoadScene("SampleScene");

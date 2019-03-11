@@ -12,6 +12,11 @@ public class PowerUpJump : MonoBehaviour
     private bool leilaCanJump;
     private bool danCanJump;
 
+    [Header("Sounds")]
+    [Range(0, 1)]
+    public float Volume = 1;
+    public AudioClip JumpSound;
+
     private void OnTriggerEnter(Collider jump)
     {
         if (jump.gameObject == PlayerLeila)
@@ -26,13 +31,15 @@ public class PowerUpJump : MonoBehaviour
 
     private void Update()
     {
-        if (leilaCanJump && Input.GetKeyDown(KeyCode.Space))
+        if (leilaCanJump && Input.GetButtonDown("Jump"))
         {
             PlayerLeila.GetComponent<Rigidbody>().AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
+            AudioSource.PlayClipAtPoint(JumpSound, PlayerLeila.transform.position, Volume);
         }
-        else if (danCanJump && Input.GetKeyDown(KeyCode.Space))
+        else if (danCanJump && Input.GetButtonDown("Jump"))
         {
             PlayerDan.GetComponent<Rigidbody>().AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
+            AudioSource.PlayClipAtPoint(JumpSound, PlayerDan.transform.position, Volume);
         }
     }
 }
