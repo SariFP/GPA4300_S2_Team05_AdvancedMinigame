@@ -15,10 +15,9 @@ public class ButtonEvent : MonoBehaviour
     public Transform endMark;
 
     public float speed = 1.0f;
-    private float startTime;
-    private float t;
+    public float t;
 
-    private bool onButton;
+    public bool onButton;
     public bool onPlatform;
 
     private void Start()
@@ -32,31 +31,32 @@ public class ButtonEvent : MonoBehaviour
         if (onButton)
         {
             t += Time.deltaTime * speed;
-            Platform.transform.position = Vector3.Lerp(startMark.position, endMark.position, t);
+
         }
-        else if (!onButton)
+        else
         {
-            t += Time.deltaTime * speed;
-            //Platform.transform.position = Vector3.Lerp(endMark.position, startMark.position, t);
+            t -= Time.deltaTime * speed;
+            //Platform.transform.position = Vector3.Lerp(startMark.position, endMark.position, t);
         }
+        t = Mathf.Clamp01(t);
+
+        Platform.transform.position = Vector3.Lerp(startMark.position, endMark.position, t);
+
     }
 
     private void OnCollisionEnter(Collision button)
     {
         if (button.gameObject.tag == "Player")
         {
-            startTime = Time.time;
             transform.Translate(0, -ButtonDown, 0);
             onButton = true;
-            t = 0;
+            //t = 0;
         }
     }
 
     private void OnCollisionExit(Collision button)
     {
-        Platform.transform.position = Vector3.Lerp(endMark.position, startMark.position, t);
-        startTime = Time.time;
-        onButton = false;
-        t = 0;
+        if (button.gameObject.tag == "Player")
+            onButton = false;
     }
 }
