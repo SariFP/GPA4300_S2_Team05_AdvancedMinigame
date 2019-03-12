@@ -19,17 +19,13 @@ public class PlayerControll : MonoBehaviour
 
     void Update()
     {
-        if (isGrounded)
+        if (isGrounded && controllable)
         {
-            controllable = true;
-
+            //controllable = true;
+            float InputX = transform.position.x + Input.GetAxis("Horizontal_" + index) * MoveSpeed * Time.deltaTime;
+            float InputZ = transform.position.z + Input.GetAxis("Vertical_" + index) * MoveSpeed * Time.deltaTime;
+            transform.position = new Vector3(InputX, transform.position.y, InputZ);
         }
-            if (controllable)
-            {
-                float InputX = transform.position.x + Input.GetAxis("Horizontal_" + index) * MoveSpeed * Time.deltaTime;
-                float InputZ = transform.position.z + Input.GetAxis("Vertical_" + index) * MoveSpeed * Time.deltaTime;
-                transform.position = new Vector3(InputX, transform.position.y, InputZ);
-            }
 
         //if (isMoving && isGrounded)
         //{

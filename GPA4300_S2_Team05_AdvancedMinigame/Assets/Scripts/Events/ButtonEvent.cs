@@ -15,12 +15,11 @@ public class ButtonEvent : MonoBehaviour
     public Transform endMark;
 
     public float speed = 1.0f;
-
     private float startTime;
+    private float t;
 
     private bool onButton;
-
-    private float t;
+    public bool onPlatform;
 
     private void Start()
     {

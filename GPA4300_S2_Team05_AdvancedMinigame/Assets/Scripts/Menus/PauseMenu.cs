@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -17,8 +18,9 @@ public class PauseMenu : MonoBehaviour
     public AudioClip ClickSound;
 
     [HideInInspector] public bool isPaused = false;
-
     private bool isPressed;
+
+
 
     void Start()
     {
@@ -34,13 +36,20 @@ public class PauseMenu : MonoBehaviour
             PausePanel.SetActive(!PausePanel.activeSelf);
             AudioSource.PlayClipAtPoint(ClickSound, PlayerLeila.transform.position, Volume);
             AudioSource.PlayClipAtPoint(ClickSound, PlayerDan.transform.position, Volume);
-            Time.timeScale = 0;
-            isPaused = true;
+            //Time.timeScale = 0;
         }
         else if (isPressed)
         {
             isPressed = false;
-            //Unpause();
+        }
+
+        if (PausePanel.activeSelf && isPressed)
+        {
+            LockStates(true, true, true);
+        }
+        else if (isPressed)
+        {
+            LockStates(false, true, true);
         }
     }
 
@@ -80,10 +89,40 @@ public class PauseMenu : MonoBehaviour
         {
             PausePanel.SetActive(false);
         }
-        //PausePanel.SetActive(false);
-        ShowCursor(false);
+        LockStates(false, true, true);
         isPaused = false;
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
+    }
+
+    public void LockStates (bool LockState, bool Controller, bool CursorVisible)
+    {
+        switch (LockState)
+        {
+            case true:
+                transform.GetComponent<CameraSwitch>().enabled = false;
+                if (Controller)
+                {
+                    PlayerLeila.GetComponent<PlayerControll>().controllable = false;
+                    PlayerDan.GetComponent<PlayerControll>().controllable = false;
+                }
+                if (CursorVisible)
+                {
+                    ShowCursor(true);
+                }
+                break;
+            case false:
+                transform.GetComponent<CameraSwitch>().enabled = true;
+                if (Controller)
+                {
+                    PlayerLeila.GetComponent<PlayerControll>().controllable = true;
+                    PlayerDan.GetComponent<PlayerControll>().controllable = true;
+                }
+                if (CursorVisible)
+                {
+                    ShowCursor(false);
+                }
+                break;
+        }
     }
 
     public void ShowCursor(bool state)

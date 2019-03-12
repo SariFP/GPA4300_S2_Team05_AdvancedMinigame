@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraControll : MonoBehaviour
+public class CameraSwitch : MonoBehaviour
 {
     public GameObject LeilaCam;
     public GameObject DanCam;
