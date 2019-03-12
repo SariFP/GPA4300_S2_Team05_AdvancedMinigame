@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7995769885602046702}
   - component: {fileID: 5776887820052777845}
   - component: {fileID: 3339753320674704580}
+  - component: {fileID: 1603434250663253876}
   m_Layer: 0
   m_Name: Dan
   m_TagString: Untagged
@@ -251,6 +252,20 @@ MonoBehaviour:
   index: 1
   isGrounded: 0
   controllable: 0
+--- !u!114 &1603434250663253876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320131481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ecc89a0e1dadbe49a8845917a41a74a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SplitCam: {fileID: 0}
+  OneCam: {fileID: 0}
 --- !u!1 &77676612805439620
 GameObject:
   m_ObjectHideFlags: 0
