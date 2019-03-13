@@ -21,6 +21,7 @@ public class CustomizeMenu : MonoBehaviour
     {
         LeilaCustomizer.SetActive(true);
         DanCustomizer.SetActive(false);
+        mainMenu.GetComponent<MainMenuManager>();
     }
 
     public void LeilaFinishButton()
@@ -35,11 +36,11 @@ public class CustomizeMenu : MonoBehaviour
         AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         if (mainMenu.singlePlayer == true)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(SceneManager.sceneCount + 1);
         }
         else if (mainMenu.multiPlayer == true)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(SceneManager.sceneCount + 1);
         }
     }
 }

@@ -61,9 +61,4 @@ public class MainMenuManager : MonoBehaviour
         AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         MainMenu.SetActive(true);
     }
-
-    public void VolumeSlide()
-    {
-
-    }
 }

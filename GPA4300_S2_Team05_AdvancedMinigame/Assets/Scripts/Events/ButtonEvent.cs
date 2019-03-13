@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ButtonEvent : MonoBehaviour
 {
-    public GameObject Platform;
+    //public List<GameObject> button = new List<GameObject>();
+    public GameObject Button1;
+    public GameObject Button2;
     public GameObject PlayerLeila;
     public GameObject PlayerDan;
 
@@ -18,7 +20,6 @@ public class ButtonEvent : MonoBehaviour
     public float t;
 
     public bool onButton;
-    public bool onPlatform;
 
     private void Start()
     {
@@ -28,35 +29,42 @@ public class ButtonEvent : MonoBehaviour
 
     private void Update()
     {
+        if (PlayerLeila.gameObject.tag == "Button" || PlayerDan.gameObject.tag == "Button")
+        {
+            onButton = true;
+        }
+        else
+        {
+            onButton = false;
+        }
+
         if (onButton)
         {
             t += Time.deltaTime * speed;
-
         }
         else
         {
             t -= Time.deltaTime * speed;
-            //Platform.transform.position = Vector3.Lerp(startMark.position, endMark.position, t);
         }
         t = Mathf.Clamp01(t);
 
-        Platform.transform.position = Vector3.Lerp(startMark.position, endMark.position, t);
+        transform.position = Vector3.Lerp(startMark.transform.position, endMark.transform.position, t);
 
     }
 
-    private void OnCollisionEnter(Collision button)
-    {
-        if (button.gameObject.tag == "Player")
-        {
-            transform.Translate(0, -ButtonDown, 0);
-            onButton = true;
-            //t = 0;
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (Button1.gameObject.tag == "Player" || Button2.gameObject.tag == "Player")
+    //    {
+    //        //transform.Translate(0, -ButtonDown, 0);
+    //        onButton = true;
+    //        //t = 0;
+    //    }
+    //}
 
-    private void OnCollisionExit(Collision button)
-    {
-        if (button.gameObject.tag == "Player")
-            onButton = false;
-    }
+    //private void OnCollisionExit(Collision collision)
+    //{
+    //    if (Button1.gameObject == PlayerLeila.gameObject || Button2.gameObject == PlayerDan.gameObject)
+    //        onButton = false;
+    //}
 }
