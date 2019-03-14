@@ -34,13 +34,7 @@ public class CustomizeMenu : MonoBehaviour
     public void DanFinishButton()
     {
         AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
-        if (mainMenu.singlePlayer == true)
-        {
-            SceneManager.LoadScene(SceneManager.sceneCount + 1);
-        }
-        else if (mainMenu.multiPlayer == true)
-        {
-            SceneManager.LoadScene(SceneManager.sceneCount + 1);
-        }
+        SceneManager.LoadScene(SceneManager.sceneCount + 1);
+
     }
 }
