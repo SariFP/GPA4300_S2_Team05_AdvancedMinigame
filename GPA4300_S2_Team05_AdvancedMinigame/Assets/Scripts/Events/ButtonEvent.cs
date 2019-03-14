@@ -25,13 +25,16 @@ public class ButtonEvent : MonoBehaviour
     {
         PlayerLeila.GetComponent<PlayerControll>().isGrounded = true;
         PlayerDan.GetComponent<PlayerControll>().isGrounded = true;
+
+        onButton = false;
     }
 
     private void Update()
     {
-        if (PlayerLeila.gameObject.tag == "Button" || PlayerDan.gameObject.tag == "Button")
+        if (PlayerLeila.gameObject == Button1.GetComponent<BoxCollider>() || PlayerDan.gameObject == Button1.gameObject)
         {
             onButton = true;
+            Debug.Log("onButton");
         }
         else
         {
@@ -54,17 +57,21 @@ public class ButtonEvent : MonoBehaviour
 
     //private void OnCollisionEnter(Collision collision)
     //{
-    //    if (Button1.gameObject.tag == "Player" || Button2.gameObject.tag == "Player")
+    //    if (Button1.gameObject.tag == "Player")
     //    {
     //        //transform.Translate(0, -ButtonDown, 0);
     //        onButton = true;
-    //        //t = 0;
     //    }
     //}
 
     //private void OnCollisionExit(Collision collision)
     //{
-    //    if (Button1.gameObject == PlayerLeila.gameObject || Button2.gameObject == PlayerDan.gameObject)
-    //        onButton = false;
+    //    if (collision.gameObject.tag == "Button")
+    //    {
+    //        if (collision.gameObject == PlayerLeila.gameObject || collision.gameObject == PlayerDan)
+    //        {
+    //            onButton = false;
+    //        }
+    //    }
     //}
 }

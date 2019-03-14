@@ -7,7 +7,7 @@ public class PlayerControll : MonoBehaviour
     public float MoveSpeed;
     public int index;
     Animator anim;
-    public Rigidbody rb;
+    private Rigidbody rb;
 
     /*[HideInInspector]*/ public bool isGrounded;
     /*[HideInInspector]*/ public bool controllable;
@@ -29,12 +29,12 @@ public class PlayerControll : MonoBehaviour
             transform.position = new Vector3(InputX, transform.position.y, InputZ);
         }
 
-        if (controllable)
-        {
-            anim.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
-            anim.SetFloat("yVelocity", Mathf.Abs(rb.velocity.y));
-            anim.SetBool("isGrounded", isGrounded);
-        }
+        //if (controllable)
+        //{
+        //    anim.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
+        //    anim.SetFloat("yVelocity", Mathf.Abs(rb.velocity.y));
+        //    anim.SetBool("isGrounded", isGrounded);
+        //}
     }
 
     private void OnCollisionStay(Collision collision)
