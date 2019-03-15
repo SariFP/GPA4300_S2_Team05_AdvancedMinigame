@@ -3,7 +3,11 @@ guid: 76af6fa18c8c4c345a3bed89deccc8f9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - mainMenu: {instanceID: 0}
+  - LeilaCustomizer: {instanceID: 0}
+  - DanCustomizer: {instanceID: 0}
+  - ClickSound: {fileID: 8300000, guid: b35e0068424d0c0468949226fdbcdf27, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

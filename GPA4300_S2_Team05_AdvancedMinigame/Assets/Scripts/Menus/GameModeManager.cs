@@ -5,23 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class GameModeManager : MonoBehaviour
 {
-    [HideInInspector] public MainMenuManager MainMenu;
+    [HideInInspector] public MainMenuManager mainMenuManager;
     public GameObject OneScreen;
     public GameObject SplitScreen;
 
     private void Start()
     {
-        MainMenu.GetComponent<MainMenuManager>();
+        mainMenuManager.MainMenu.GetComponent<MainMenuManager>();
     }
 
     private void Update()
     {
-        if (MainMenu.singlePlayer == true)
+        if (mainMenuManager.singlePlayer == true)
         {
             OneScreen.SetActive(true);
             SplitScreen.SetActive(false);
         }
-        else if (MainMenu.multiPlayer == true)
+        else if (mainMenuManager.multiPlayer == true)
         {
             OneScreen.SetActive(false);
             SplitScreen.SetActive(true);

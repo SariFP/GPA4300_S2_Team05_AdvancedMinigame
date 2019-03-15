@@ -511,8 +511,8 @@ ModelImporter:
     - serializedVersion: 16
       name: HumanoidIdleJumpUp
       takeName: _207_Idle_JumpUpMedium_NoHands1Step_Idle
-      firstFrame: 56
-      lastFrame: 233
+      firstFrame: 96
+      lastFrame: 183
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

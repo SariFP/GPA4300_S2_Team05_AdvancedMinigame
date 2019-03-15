@@ -21,20 +21,20 @@ public class CustomizeMenu : MonoBehaviour
     {
         LeilaCustomizer.SetActive(true);
         DanCustomizer.SetActive(false);
-        mainMenu.GetComponent<MainMenuManager>();
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void LeilaFinishButton()
     {
         LeilaCustomizer.SetActive(false);
-        AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
+        AudioSource.PlayClipAtPoint(ClickSound, LeilaCustomizer.transform.position, Volume);
         DanCustomizer.SetActive(true);
     }
 
     public void DanFinishButton()
     {
-        AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
+        AudioSource.PlayClipAtPoint(ClickSound, DanCustomizer.transform.position, Volume);
         SceneManager.LoadScene(SceneManager.sceneCount + 1);
-
     }
 }

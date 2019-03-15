@@ -3,7 +3,12 @@ guid: 776392f97d3d3744fb7d6f0778593576
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - mainMenuManager: {instanceID: 0}
+  - OneScreen: {fileID: 8678340237642647657, guid: 1b7815cf4e66623459c1d1b370cc98a1,
+      type: 3}
+  - SplitScreen: {fileID: 3686906205626061573, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
