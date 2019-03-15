@@ -9,9 +9,9 @@ public class PlayerControll : MonoBehaviour
     Animator anim;
     private Rigidbody rb;
 
-    [HideInInspector] public bool isGrounded;
-    [HideInInspector] public bool controllable;
-    public bool isMoving;
+    /*[HideInInspector]*/ public bool isGrounded;
+    /*[HideInInspector]*/ public bool controllable;
+    /*[HideInInspector]*/ public bool isWalking;
 
     void Start()
     {
@@ -22,20 +22,16 @@ public class PlayerControll : MonoBehaviour
 
     void Update()
     {
+
         if (isGrounded && controllable)
         {
             float InputX = transform.position.x + Input.GetAxis("Horizontal_" + index) * MoveSpeed * Time.deltaTime;
             float InputZ = transform.position.z + Input.GetAxis("Vertical_" + index) * MoveSpeed * Time.deltaTime;
             transform.position = new Vector3(InputX, transform.position.y, InputZ);
-            isMoving = true;
         }
-
-        if (controllable)
-        {
-            anim.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
-            anim.SetFloat("yVelocity", Mathf.Abs(rb.velocity.y));
-            anim.SetBool("isGrounded", isGrounded);
-        }
+            anim.SetBool("isWalking", isWalking);
+            //anim.SetFloat("xVelocity", InputX);
+            //anim.SetFloat("yVelocity", InputZ);
     }
 
     private void OnCollisionStay(Collision collision)
@@ -44,10 +40,5 @@ public class PlayerControll : MonoBehaviour
         {
             isGrounded = true;
         }
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        isGrounded = false;
-        anim.SetTrigger("Fall");
     }
 }

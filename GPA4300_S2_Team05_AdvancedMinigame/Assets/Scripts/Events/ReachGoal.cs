@@ -57,7 +57,7 @@ public class ReachGoal : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(ClickSound, PlayerLeila.transform.position, Volume);
         AudioSource.PlayClipAtPoint(ClickSound, PlayerDan.transform.position, Volume);
-        SceneManager.LoadScene(SceneManager.sceneCount + 1);
+        SceneManager.LoadScene(SceneManager.sceneCount + 2);
     }
     public void BackToMainMenuButton()
     {
