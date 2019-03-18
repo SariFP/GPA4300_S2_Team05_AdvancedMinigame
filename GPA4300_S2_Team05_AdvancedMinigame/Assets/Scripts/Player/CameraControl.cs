@@ -5,6 +5,8 @@ using Cinemachine;
 
 public class CameraControl : MonoBehaviour
 {
+    public PauseMenu pause;
+
     public CinemachineFreeLook SplitCam;
     public CinemachineFreeLook OneCam;
 
@@ -15,5 +17,18 @@ public class CameraControl : MonoBehaviour
 
         SplitCam.m_XAxis.Value = 0.0f;
         SplitCam.m_YAxis.Value = 0.5f;
+
+        if (pause.isPaused)
+        {
+            OneCam.enabled = false;
+
+            SplitCam.enabled = false;
+        }
+        else
+        {
+            OneCam.enabled = true;
+
+            SplitCam.enabled = true;
+        }
     }
 }

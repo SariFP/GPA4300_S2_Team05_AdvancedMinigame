@@ -47,7 +47,6 @@ public class ReachGoal : MonoBehaviour
             AudioSource.PlayClipAtPoint(GoalSound, PlayerLeila.transform.position, Volume);
             GoalPanel.SetActive(true);
             Time.timeScale = 0;
-            //playerCntrl.controllable = false;
             Cursor.visible = (true);
             Cursor.lockState = CursorLockMode.None;
         }
@@ -57,7 +56,7 @@ public class ReachGoal : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(ClickSound, PlayerLeila.transform.position, Volume);
         AudioSource.PlayClipAtPoint(ClickSound, PlayerDan.transform.position, Volume);
-        SceneManager.LoadScene(SceneManager.sceneCount + 2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void BackToMainMenuButton()
     {

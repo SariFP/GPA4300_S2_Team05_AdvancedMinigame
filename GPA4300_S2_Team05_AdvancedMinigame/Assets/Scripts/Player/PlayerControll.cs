@@ -7,7 +7,10 @@ public class PlayerControll : MonoBehaviour
     public float MoveSpeed;
     public int index;
     Animator anim;
-    private Rigidbody rb;
+    float InputX;
+    float InputZ;
+
+    private Vector3 moveDirection = Vector3.zero;
 
     /*[HideInInspector]*/ public bool isGrounded;
     /*[HideInInspector]*/ public bool controllable;
@@ -16,22 +19,24 @@ public class PlayerControll : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
-
         if (isGrounded && controllable)
         {
-            float InputX = transform.position.x + Input.GetAxis("Horizontal_" + index) * MoveSpeed * Time.deltaTime;
-            float InputZ = transform.position.z + Input.GetAxis("Vertical_" + index) * MoveSpeed * Time.deltaTime;
+            /*float*/ InputX = transform.position.x + Input.GetAxis("Horizontal_" + index) * MoveSpeed * Time.deltaTime;
+            /*float*/ InputZ = transform.position.z + Input.GetAxis("Vertical_" + index) * MoveSpeed * Time.deltaTime;
             transform.position = new Vector3(InputX, transform.position.y, InputZ);
+            isWalking = true;
         }
-            anim.SetBool("isWalking", isWalking);
-            //anim.SetFloat("xVelocity", InputX);
-            //anim.SetFloat("yVelocity", InputZ);
+        if (isWalking)
+        {
+            //anim.SetBool("isWalking", isWalking);
+            anim.SetFloat("xVelocity", InputX);
+            anim.SetFloat("yVelocity", InputZ);
+        }
     }
 
     private void OnCollisionStay(Collision collision)

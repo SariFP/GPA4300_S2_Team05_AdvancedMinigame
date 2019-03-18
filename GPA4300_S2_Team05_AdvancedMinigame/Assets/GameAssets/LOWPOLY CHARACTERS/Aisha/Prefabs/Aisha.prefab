@@ -257,7 +257,8 @@ SkinnedMeshRenderer:
   - {fileID: 3339898425922994183}
   - {fileID: 3339898425922994673}
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 3339898425922994231}
+  m_RootBone: {fileID: 5426861221935141697, guid: 33cbf21f9df491e4fb7e2bf6473f23ce,
+    type: 3}
   m_AABB:
     m_Center: {x: -0.00000012665987, y: 0.6351335, z: 0.104494214}
     m_Extent: {x: 0.09638577, y: 0.15473188, z: 0.11591813}
@@ -2503,6 +2504,7 @@ MonoBehaviour:
   index: 1
   isGrounded: 0
   controllable: 0
+  isWalking: 0
 --- !u!1 &3339898425922641329
 GameObject:
   m_ObjectHideFlags: 0

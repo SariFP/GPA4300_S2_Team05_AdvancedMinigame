@@ -21,7 +21,6 @@ public class PauseMenu : MonoBehaviour
     private bool isPressed;
 
 
-
     void Start()
     {
         PausePanel.SetActive(false);
@@ -33,10 +32,10 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetButtonDown("Pause") && !isPressed && !isPaused)
         {
             isPressed = true;
+            isPaused = true;
             PausePanel.SetActive(!PausePanel.activeSelf);
             AudioSource.PlayClipAtPoint(ClickSound, PlayerLeila.transform.position, Volume);
             AudioSource.PlayClipAtPoint(ClickSound, PlayerDan.transform.position, Volume);
-            //Time.timeScale = 0;
         }
         else if (isPressed)
         {
@@ -91,7 +90,6 @@ public class PauseMenu : MonoBehaviour
         }
         LockStates(false, true, true);
         isPaused = false;
-        //Time.timeScale = 1;
     }
 
     public void LockStates (bool LockState, bool Controller, bool CursorVisible)
