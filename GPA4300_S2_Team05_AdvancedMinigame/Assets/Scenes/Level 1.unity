@@ -609,11 +609,6 @@ PrefabInstance:
       propertyPath: PlayerDan
       value: 
       objectReference: {fileID: 697396423}
-    - target: {fileID: 2094324639477610317, guid: 6fa2b6b65fcd11b4b8406da739d39d9e,
-        type: 3}
-      propertyPath: LeilaSplitCam
-      value: 
-      objectReference: {fileID: 3686906203891815341}
     - target: {fileID: 164081856055422490, guid: 6fa2b6b65fcd11b4b8406da739d39d9e,
         type: 3}
       propertyPath: OneScreen
@@ -624,41 +619,26 @@ PrefabInstance:
       propertyPath: SplitScreen
       value: 
       objectReference: {fileID: 3686906203891815343}
-    - target: {fileID: 164081856055422490, guid: 6fa2b6b65fcd11b4b8406da739d39d9e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3532427371955829192, guid: 6fa2b6b65fcd11b4b8406da739d39d9e,
-        type: 3}
-      propertyPath: DanCam
-      value: 
-      objectReference: {fileID: 2127751217}
     - target: {fileID: 3532427371955829192, guid: 6fa2b6b65fcd11b4b8406da739d39d9e,
         type: 3}
       propertyPath: LeilaCam
       value: 
       objectReference: {fileID: 110180064}
+    - target: {fileID: 3532427371955829192, guid: 6fa2b6b65fcd11b4b8406da739d39d9e,
+        type: 3}
+      propertyPath: DanCam
+      value: 
+      objectReference: {fileID: 2127751217}
     - target: {fileID: 1172545803687818981, guid: 6fa2b6b65fcd11b4b8406da739d39d9e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2119595761}
-    - target: {fileID: 1172545803687818981, guid: 6fa2b6b65fcd11b4b8406da739d39d9e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextLevelButton
-      objectReference: {fileID: 0}
     - target: {fileID: 5542404745597851990, guid: 6fa2b6b65fcd11b4b8406da739d39d9e,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1769909796}
-    - target: {fileID: 5542404745597851990, guid: 6fa2b6b65fcd11b4b8406da739d39d9e,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetVolume
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fa2b6b65fcd11b4b8406da739d39d9e, type: 3}
 --- !u!1 &189278063 stripped
@@ -3177,7 +3157,7 @@ PrefabInstance:
     - target: {fileID: 3686906204392876430, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.21316439
+      value: -0.21316436
       objectReference: {fileID: 0}
     - target: {fileID: 3686906204392876430, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
@@ -3187,7 +3167,7 @@ PrefabInstance:
     - target: {fileID: 3686906204392876430, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.006781982
+      value: 0.0067819827
       objectReference: {fileID: 0}
     - target: {fileID: 3686906204392876430, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
@@ -3197,32 +3177,32 @@ PrefabInstance:
     - target: {fileID: 3686906203743884684, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.3059098
+      value: -0.30591005
       objectReference: {fileID: 0}
     - target: {fileID: 3686906203743884684, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.03265731
+      value: -0.032657288
       objectReference: {fileID: 0}
     - target: {fileID: 3686906203743884684, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.010519791
+      value: 0.010519793
       objectReference: {fileID: 0}
     - target: {fileID: 3686906203743884684, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9514421
+      value: -0.951442
       objectReference: {fileID: 0}
     - target: {fileID: 3686906204212649506, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.21369958
+      value: 0.21369956
       objectReference: {fileID: 0}
     - target: {fileID: 3686906204212649506, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.064797364
+      value: -0.0647974
       objectReference: {fileID: 0}
     - target: {fileID: 3686906204212649506, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
@@ -3232,7 +3212,7 @@ PrefabInstance:
     - target: {fileID: 3686906204212649506, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.28275985
+      value: 0.28275996
       objectReference: {fileID: 0}
     - target: {fileID: 3686906204212649506, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
@@ -3247,22 +3227,22 @@ PrefabInstance:
     - target: {fileID: 3686906204017067387, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.29325354
+      value: 0.29325378
       objectReference: {fileID: 0}
     - target: {fileID: 3686906204017067387, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.08771481
+      value: -0.08771489
       objectReference: {fileID: 0}
     - target: {fileID: 3686906204017067387, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9120953
+      value: 0.9120952
       objectReference: {fileID: 0}
     - target: {fileID: 3686906204017067387, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.2727467
+      value: 0.27274653
       objectReference: {fileID: 0}
     - target: {fileID: 3686906204017067387, guid: 8d8aedd9be2a7514ea89fc1de031c81b,
         type: 3}

@@ -2387,12 +2387,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6410170165678982491}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 776392f97d3d3744fb7d6f0778593576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenu: {fileID: 0}
   OneScreen: {fileID: 0}
   SplitScreen: {fileID: 0}
 --- !u!114 &3532427371955829192

@@ -11,16 +11,13 @@ public class MainMenuManager : MonoBehaviour
     public GameObject OptionsMenu;
     public GameObject StartOptions;
 
-    [HideInInspector] public bool singlePlayer = false;
-    [HideInInspector] public bool multiPlayer = false;
+    //[HideInInspector] public bool singlePlayer = false;
+    //[HideInInspector] public bool multiPlayer = false;
 
     [Header("Sounds")]
     [Range(0, 1)]
     public float Volume = 1;
     public AudioClip ClickSound;
-
-    //[Header("OptionsMenu")]
-    //public Slider Volume;
 
     public void StartButton()
     {
@@ -32,13 +29,15 @@ public class MainMenuManager : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         SceneManager.LoadScene("CustomizeCharacter");
-        singlePlayer = true;
+        //singlePlayer = true;
+        PlayerPrefs.SetInt("PlayerChoice", 1);
     }
     public void MultiPlayer()
     {
         AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         SceneManager.LoadScene("CustomizeCharacter");
-        multiPlayer = true;
+        //multiPlayer = true;
+        PlayerPrefs.SetInt("PlayerChoice", 2);
     }
     
     public void OptionsButton()
