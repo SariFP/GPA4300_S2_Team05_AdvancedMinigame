@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControll : MonoBehaviour
 {
     public float MoveSpeed;
+    public float turnAngle;
     public int index;
     Animator anim;
     float InputX;
@@ -39,6 +40,9 @@ public class PlayerControll : MonoBehaviour
 
         if (Input.GetAxis("Horizontal_" + index) != 0)
         {
+            turnAngle += Input.GetAxis("Horizontal_" + index);
+            transform.eulerAngles = new Vector3(0, turnAngle, 0);
+            //transform.RotateAroundLocal(Vector3.up, turnSpeed * Time.deltaTime);
             anim.SetBool("WalkLeft", true);
         }
         else

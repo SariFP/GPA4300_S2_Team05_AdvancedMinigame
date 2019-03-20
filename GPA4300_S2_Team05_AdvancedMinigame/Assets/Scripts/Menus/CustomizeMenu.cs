@@ -11,6 +11,8 @@ public class CustomizeMenu : MonoBehaviour
     [Header("CustomizePanels")]
     public GameObject LeilaCustomizer;
     public GameObject DanCustomizer;
+    public GameObject LeilaCam;
+    public GameObject DanCam;
 
     [Header("Sounds")]
     [Range(0, 1)]
@@ -20,7 +22,9 @@ public class CustomizeMenu : MonoBehaviour
     private void Start()
     {
         LeilaCustomizer.SetActive(true);
+        LeilaCam.SetActive(true);
         DanCustomizer.SetActive(false);
+        DanCam.SetActive(false);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
@@ -28,8 +32,10 @@ public class CustomizeMenu : MonoBehaviour
     public void LeilaFinishButton()
     {
         LeilaCustomizer.SetActive(false);
+        LeilaCam.SetActive(false);
         AudioSource.PlayClipAtPoint(ClickSound, LeilaCustomizer.transform.position, Volume);
         DanCustomizer.SetActive(true);
+        DanCam.SetActive(true);
     }
 
     public void DanFinishButton()
