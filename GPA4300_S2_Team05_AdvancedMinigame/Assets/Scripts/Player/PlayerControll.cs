@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerControll : MonoBehaviour
 {
-    public CharacterConfigurator CharaConfig;
+    public ScriptableObjectClothes Cloth;
 
     public float MoveSpeed;
     public float turnAngle;
@@ -19,15 +19,20 @@ public class PlayerControll : MonoBehaviour
     /*[HideInInspector]*/ public bool controllable;
 
     [Header("BodyParts")]
-    public SkinnedMeshRenderer Torso;
-    public SkinnedMeshRenderer Hair;
+    public GameObject Torso;
+    public GameObject Hair;
 
     void Start()
     {
-        Init();
-
         anim = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
+        Init();
+    }
+
+    private void Init()
+    {
+        Hair.GetComponent<SkinnedMeshRenderer>().sharedMesh = Cloth.Hair.mesh;
+        Hair.GetComponent<SkinnedMeshRenderer>().sharedMaterial = Cloth.Hair.material;
     }
 
     void Update()
@@ -46,13 +51,13 @@ public class PlayerControll : MonoBehaviour
         else
             anim.SetBool("isWalking", false);
 
-        //if (Input.GetAxis("Horizontal_" + index) != 0)
-        //{
-        //    turnAngle += Input.GetAxis("Horizontal_" + index);
-        //    transform.eulerAngles = new Vector3(transform.position.x, turnAngle, transform.position.y);
-        //    //transform.RotateAroundLocal(Vector3.up, turnSpeed * Time.deltaTime);
-        //    anim.SetBool("WalkLeft", true);
-        //}
+        if (Input.GetAxis("Horizontal_" + index) != 0)
+        {
+            //turnAngle += Input.GetAxis("Horizontal_" + index);
+            //transform.eulerAngles = new Vector3(transform.position.x, turnAngle, transform.position.y);
+            //transform.RotateAroundLocal(Vector3.up, turnSpeed * Time.deltaTime);
+            //anim.SetBool("WalkLeft", true);
+        }
         //else
         //    anim.SetBool("WalkLeft", false);
 
@@ -64,11 +69,6 @@ public class PlayerControll : MonoBehaviour
         //}
         //else
         //    anim.SetBool("WalkRight", false);
-    }
-
-    private void Init()
-    {
-        Hair.SkinnedMeshRenderer = CharaConfig.Hair;
     }
 
     private void OnCollisionStay(Collision collision)

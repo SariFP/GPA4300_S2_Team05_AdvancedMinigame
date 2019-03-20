@@ -41,6 +41,6 @@ public class CustomizeMenu : MonoBehaviour
     public void DanFinishButton()
     {
         AudioSource.PlayClipAtPoint(ClickSound, DanCustomizer.transform.position, Volume);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Additive);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
