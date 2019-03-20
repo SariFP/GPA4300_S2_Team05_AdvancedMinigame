@@ -879,8 +879,34 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3794031299766611443, guid: 2d2d0ada9b124884eb323a366de6a681,
+        type: 3}
+      propertyPath: clothesTypes.Array.data[9].clothes.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3794031299766611443, guid: 2d2d0ada9b124884eb323a366de6a681,
+        type: 3}
+      propertyPath: clothesTypes.Array.data[4].clothes.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3794031299766611443, guid: 2d2d0ada9b124884eb323a366de6a681,
+        type: 3}
+      propertyPath: clothesTypes.Array.data[9].clothes.Array.data[10]
+      value: 
+      objectReference: {fileID: 2088424741}
+    - target: {fileID: 3794031299766611443, guid: 2d2d0ada9b124884eb323a366de6a681,
+        type: 3}
+      propertyPath: clothesTypes.Array.data[4].clothes.Array.data[11]
+      value: 
+      objectReference: {fileID: 1135676066}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d2d0ada9b124884eb323a366de6a681, type: 3}
+--- !u!1 &1135676066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 450536152, guid: 2d2d0ada9b124884eb323a366de6a681,
+    type: 3}
+  m_PrefabInstance: {fileID: 1007306131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1287383192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,3 +1042,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &2088424741 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1885699020, guid: 2d2d0ada9b124884eb323a366de6a681,
+    type: 3}
+  m_PrefabInstance: {fileID: 1007306131}
+  m_PrefabAsset: {fileID: 0}

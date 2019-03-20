@@ -12,9 +12,8 @@ public class PlayerControll : MonoBehaviour
 
     private Vector3 moveDirection = Vector3.zero;
 
-    /*[HideInInspector]*/ public bool isGrounded;
+    [HideInInspector] public bool isGrounded;
     /*[HideInInspector]*/ public bool controllable;
-    /*[HideInInspector]*/ public bool isWalking;
 
     void Start()
     {
@@ -29,14 +28,21 @@ public class PlayerControll : MonoBehaviour
             /*float*/ InputX = transform.position.x + Input.GetAxis("Horizontal_" + index) * MoveSpeed * Time.deltaTime;
             /*float*/ InputZ = transform.position.z + Input.GetAxis("Vertical_" + index) * MoveSpeed * Time.deltaTime;
             transform.position = new Vector3(InputX, transform.position.y, InputZ);
-            isWalking = true;
         }
-        if (isWalking)
+
+        if (Input.GetAxis("Vertical_" + index) != 0)
         {
-            //anim.SetBool("isWalking", isWalking);
-            anim.SetFloat("xVelocity", InputX);
-            anim.SetFloat("yVelocity", InputZ);
+            anim.SetBool("isWalking", true);
         }
+        else
+            anim.SetBool("isWalking", false);
+
+        if (Input.GetAxis("Horizontal_" + index) != 0)
+        {
+            anim.SetBool("WalkLeft", true);
+        }
+        else
+            anim.SetBool("WalkLeft", false);
     }
 
     private void OnCollisionStay(Collision collision)
