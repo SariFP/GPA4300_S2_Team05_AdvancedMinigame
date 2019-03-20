@@ -10,7 +10,7 @@ public class CustomizeCharacter : MonoBehaviour
     public CharacterClothesTypes[] clothesTypes;
     public ClothesObject[] CurrentClothes;
 
-    public void NextClother(int SkinnedTypeIndex)
+    public void NextClother(int SkinnedTypeIndex)       //Button-Action for next Clothings
     {
         int nextClothesIndex;
         nextClothesIndex = skin[SkinnedTypeIndex].currentIndex + 1;
@@ -24,7 +24,7 @@ public class CustomizeCharacter : MonoBehaviour
         skin[SkinnedTypeIndex].currentIndex = nextClothesIndex;
     }
 
-    public void PreviousClother(int SkinnedTypeIndex)
+    public void PreviousClother(int SkinnedTypeIndex)   //Button-Action for previous Clothing
     {
         int nextClothesIndex;
 
@@ -41,7 +41,7 @@ public class CustomizeCharacter : MonoBehaviour
 
     void Start()
     {
-        CurrentClothes = new ClothesObject[clothesTypes.Length];
+        CurrentClothes = new ClothesObject[clothesTypes.Length];    //Player Clothes
     }
 
     void AddClothes(GameObject _newClothesGo)
