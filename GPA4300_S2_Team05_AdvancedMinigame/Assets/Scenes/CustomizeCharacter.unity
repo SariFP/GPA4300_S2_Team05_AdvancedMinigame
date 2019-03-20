@@ -187,13 +187,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423176752}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1483000775}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1067644284}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &758761266
 GameObject:
@@ -418,8 +418,14 @@ Transform:
   m_Children:
   - {fileID: 2096635975}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &952501649 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3779256482355118948, guid: 67fb63ada7aab2c46b9b6acde5ba0596,
+    type: 3}
+  m_PrefabInstance: {fileID: 1483000774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1007306131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1065,8 +1071,111 @@ PrefabInstance:
       propertyPath: clothesTypes.Array.data[4].clothes.Array.data[11]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1967966001413529, guid: 2d2d0ada9b124884eb323a366de6a681, type: 3}
+      propertyPath: m_Name
+      value: changer mask
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967965979964418, guid: 2d2d0ada9b124884eb323a366de6a681, type: 3}
+      propertyPath: m_Name
+      value: changer BackPack
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967966047687038, guid: 2d2d0ada9b124884eb323a366de6a681, type: 3}
+      propertyPath: m_Name
+      value: changer head
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967966417630540, guid: 2d2d0ada9b124884eb323a366de6a681, type: 3}
+      propertyPath: m_Name
+      value: changer hands
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967966492698959, guid: 2d2d0ada9b124884eb323a366de6a681, type: 3}
+      propertyPath: m_Name
+      value: changer feets
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967965156316577, guid: 2d2d0ada9b124884eb323a366de6a681, type: 3}
+      propertyPath: m_Name
+      value: changer eyes
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967965100456870, guid: 2d2d0ada9b124884eb323a366de6a681, type: 3}
+      propertyPath: m_Name
+      value: changer legs
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967965121378486, guid: 2d2d0ada9b124884eb323a366de6a681, type: 3}
+      propertyPath: m_Name
+      value: changer torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967964918320631, guid: 2d2d0ada9b124884eb323a366de6a681, type: 3}
+      propertyPath: m_Name
+      value: changer outer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967965441143794, guid: 2d2d0ada9b124884eb323a366de6a681, type: 3}
+      propertyPath: m_Name
+      value: changer Hair
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d2d0ada9b124884eb323a366de6a681, type: 3}
+--- !u!1 &1067644282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1067644284}
+  - component: {fileID: 1067644283}
+  m_Layer: 0
+  m_Name: CharacterConfigurator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1067644283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067644282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea1465a671423346b8e22eaee7e1115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CharConfig: {fileID: 0}
+  Torso: {fileID: 1089701201}
+  Hair: {fileID: 952501649}
+  hair:
+  - {fileID: 5996855691155296045, guid: a8a18836cc17423429b6aa0691d86df7, type: 3}
+  - {fileID: 5996855691155296045, guid: fce1760460177b0499834fad723984da, type: 3}
+  - {fileID: 5996855691155296045, guid: a3f2e169b1112704ab430b4862004279, type: 3}
+  - {fileID: 3439569636171167813, guid: dd0d826813b358f488837696acbe918d, type: 3}
+  - {fileID: 5996855691155296045, guid: 797d0e613a9ff714c87907b70a3d32b7, type: 3}
+  - {fileID: 5996855691155296045, guid: 7ebc718879a494844b0bc2d149cb2418, type: 3}
+  - {fileID: 5996855691155296045, guid: f5e5dce7974b06c4d83e18337b5fcbcb, type: 3}
+  - {fileID: 5996855691155296045, guid: 6c3ca28311b37a94eacdd109a85c82c2, type: 3}
+  - {fileID: 0}
+--- !u!4 &1067644284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067644282}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 423176755}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &1089701201 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2255398782444593198, guid: 67fb63ada7aab2c46b9b6acde5ba0596,
+    type: 3}
+  m_PrefabInstance: {fileID: 1483000774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1287383192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,8 +1208,8 @@ MonoBehaviour:
   mainMenu: {fileID: 0}
   LeilaCustomizer: {fileID: 794156832}
   DanCustomizer: {fileID: 1663360092}
-  LeilaCam: {fileID: 0}
-  DanCam: {fileID: 0}
+  LeilaCam: {fileID: 423176752}
+  DanCam: {fileID: 928190270}
   Volume: 1
   ClickSound: {fileID: 8300000, guid: b35e0068424d0c0468949226fdbcdf27, type: 3}
 --- !u!4 &1287383194

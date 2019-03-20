@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerControll : MonoBehaviour
 {
+    public CharacterConfigurator CharaConfig;
+
     public float MoveSpeed;
     public float turnAngle;
     public int index;
@@ -16,8 +18,14 @@ public class PlayerControll : MonoBehaviour
     /*[HideInInspector]*/ public bool isGrounded;
     /*[HideInInspector]*/ public bool controllable;
 
+    [Header("BodyParts")]
+    public SkinnedMeshRenderer Torso;
+    public SkinnedMeshRenderer Hair;
+
     void Start()
     {
+        Init();
+
         anim = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -56,6 +64,11 @@ public class PlayerControll : MonoBehaviour
         //}
         //else
         //    anim.SetBool("WalkRight", false);
+    }
+
+    private void Init()
+    {
+        Hair.SkinnedMeshRenderer = CharaConfig.Hair;
     }
 
     private void OnCollisionStay(Collision collision)
