@@ -13,7 +13,7 @@ public class PlayerControll : MonoBehaviour
 
     private Vector3 moveDirection = Vector3.zero;
 
-    [HideInInspector] public bool isGrounded;
+    /*[HideInInspector]*/ public bool isGrounded;
     /*[HideInInspector]*/ public bool controllable;
 
     void Start()
@@ -38,15 +38,24 @@ public class PlayerControll : MonoBehaviour
         else
             anim.SetBool("isWalking", false);
 
-        if (Input.GetAxis("Horizontal_" + index) != 0)
-        {
-            turnAngle += Input.GetAxis("Horizontal_" + index);
-            transform.eulerAngles = new Vector3(0, turnAngle, 0);
-            //transform.RotateAroundLocal(Vector3.up, turnSpeed * Time.deltaTime);
-            anim.SetBool("WalkLeft", true);
-        }
-        else
-            anim.SetBool("WalkLeft", false);
+        //if (Input.GetAxis("Horizontal_" + index) != 0)
+        //{
+        //    turnAngle += Input.GetAxis("Horizontal_" + index);
+        //    transform.eulerAngles = new Vector3(transform.position.x, turnAngle, transform.position.y);
+        //    //transform.RotateAroundLocal(Vector3.up, turnSpeed * Time.deltaTime);
+        //    anim.SetBool("WalkLeft", true);
+        //}
+        //else
+        //    anim.SetBool("WalkLeft", false);
+
+        //if (Input.GetAxis("Horizontal_" + index) != 0)
+        //{
+        //    turnAngle += Input.GetAxis("Horizontal_" + index);
+        //    transform.eulerAngles = new Vector3(transform.position.x, -turnAngle, transform.position.y);
+        //    anim.SetBool("WalkRight", true);
+        //}
+        //else
+        //    anim.SetBool("WalkRight", false);
     }
 
     private void OnCollisionStay(Collision collision)
