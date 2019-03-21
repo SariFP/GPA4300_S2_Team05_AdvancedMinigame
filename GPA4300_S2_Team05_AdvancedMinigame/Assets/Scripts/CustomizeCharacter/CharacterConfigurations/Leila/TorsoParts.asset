@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff53fa7d0e50604489deef54daed0db2, type: 3}
+  m_Name: TorsoParts
+  m_EditorClassIdentifier: 
+  Parts:
+  - {fileID: 796721760300137736, guid: 1d028f1412049b5498c180f4382b5281, type: 3}
+  - {fileID: 6444381484501189813, guid: 95e157fb3a8e6b0409875ac1f4b40bb3, type: 3}
+  - {fileID: 6444381484501189813, guid: 6f16c56a27df0454c94b8749b08729ff, type: 3}
+  - {fileID: 6444381484501189813, guid: ee84055b2a747eb4daf31865d407b0f9, type: 3}
+  - {fileID: 6444381484501189813, guid: da226bc423a0f744bbad494efa68d961, type: 3}
+  - {fileID: 6444381484501189813, guid: ac81121e522713545ae618912b0003de, type: 3}
+  - {fileID: 6444381484501189813, guid: 1abc8e1cac8879e4987e09047dec7cf8, type: 3}
+  - {fileID: 6444381484501189813, guid: 0b3583e2c44a14848b8584ad8a3506bd, type: 3}
+  - {fileID: 6444381484501189813, guid: eb2e887044ce36748a4b4db1dca1b354, type: 3}
+  - {fileID: 6444381484501189813, guid: bc0a68e053ac68b4c84d75401ff1c8f6, type: 3}
+  - {fileID: 6444381484501189813, guid: c92f36f562c9024439ce9e3a5531b9fc, type: 3}
+  - {fileID: 0}

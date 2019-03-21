@@ -19,8 +19,17 @@ public class PlayerControll : MonoBehaviour
     /*[HideInInspector]*/ public bool controllable;
 
     [Header("BodyParts")]
-    public GameObject Torso;
+    public GameObject Body;
     public GameObject Hair;
+    public GameObject Head;
+    public GameObject Eyes;
+    public GameObject Mask;
+    public GameObject Torso;
+    public GameObject Outer;
+    public GameObject Backpack;
+    public GameObject Hands;
+    public GameObject Legs;
+    public GameObject Feets;
 
     void Start()
     {
@@ -33,6 +42,33 @@ public class PlayerControll : MonoBehaviour
     {
         Hair.GetComponent<SkinnedMeshRenderer>().sharedMesh = Cloth.Hair.mesh;
         Hair.GetComponent<SkinnedMeshRenderer>().sharedMaterial = Cloth.Hair.material;
+
+        Head.GetComponent<SkinnedMeshRenderer>().sharedMesh = Cloth.Head.mesh;
+        Head.GetComponent<SkinnedMeshRenderer>().sharedMaterial = Cloth.Head.material;
+
+        Eyes.GetComponent<SkinnedMeshRenderer>().sharedMesh = Cloth.Eyes.mesh;
+        Eyes.GetComponent<SkinnedMeshRenderer>().sharedMaterial = Cloth.Eyes.material;
+
+        Mask.GetComponent<SkinnedMeshRenderer>().sharedMesh = Cloth.Mask.mesh;
+        Mask.GetComponent<SkinnedMeshRenderer>().sharedMaterial = Cloth.Mask.material;
+
+        Torso.GetComponent<SkinnedMeshRenderer>().sharedMesh = Cloth.Torso.mesh;
+        Torso.GetComponent<SkinnedMeshRenderer>().sharedMaterial = Cloth.Torso.material;
+
+        Outer.GetComponent<SkinnedMeshRenderer>().sharedMesh = Cloth.Outer.mesh;
+        Outer.GetComponent<SkinnedMeshRenderer>().sharedMaterial = Cloth.Outer.material;
+
+        Backpack.GetComponent<SkinnedMeshRenderer>().sharedMesh = Cloth.Backpack.mesh;
+        Backpack.GetComponent<SkinnedMeshRenderer>().sharedMaterial = Cloth.Backpack.material;
+
+        Hands.GetComponent<SkinnedMeshRenderer>().sharedMesh = Cloth.Hands.mesh;
+        Hands.GetComponent<SkinnedMeshRenderer>().sharedMaterial = Cloth.Hands.material;
+
+        Legs.GetComponent<SkinnedMeshRenderer>().sharedMesh = Cloth.Legs.mesh;
+        Legs.GetComponent<SkinnedMeshRenderer>().sharedMaterial = Cloth.Legs.material;
+
+        Feets.GetComponent<SkinnedMeshRenderer>().sharedMesh = Cloth.Feets.mesh;
+        Feets.GetComponent<SkinnedMeshRenderer>().sharedMaterial = Cloth.Feets.material;
     }
 
     void Update()

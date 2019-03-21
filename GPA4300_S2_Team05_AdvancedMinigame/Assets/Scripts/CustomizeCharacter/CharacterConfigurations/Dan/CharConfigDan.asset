@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7dda0bcbea2e704c9b003327f5c2e68, type: 3}
+  m_Name: CharConfigDan
+  m_EditorClassIdentifier: 
+  Hair:
+    material: {fileID: 0}
+    mesh: {fileID: 0}
+  Head:
+    material: {fileID: 0}
+    mesh: {fileID: 0}
+  Eyes:
+    material: {fileID: 0}
+    mesh: {fileID: 0}
+  Mask:
+    material: {fileID: 0}
+    mesh: {fileID: 0}
+  Torso:
+    material: {fileID: 0}
+    mesh: {fileID: 0}
+  Outer:
+    material: {fileID: 0}
+    mesh: {fileID: 0}
+  Backpack:
+    material: {fileID: 0}
+    mesh: {fileID: 0}
+  Hands:
+    material: {fileID: 0}
+    mesh: {fileID: 0}
+  Legs:
+    material: {fileID: 0}
+    mesh: {fileID: 0}
+  Feets:
+    material: {fileID: 0}
+    mesh: {fileID: 0}

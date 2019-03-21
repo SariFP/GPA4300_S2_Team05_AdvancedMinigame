@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1312683930}
   - component: {fileID: 7023748612369913685}
-  - component: {fileID: 6881456671945813749}
   - component: {fileID: 2247734024848276387}
   - component: {fileID: 7331463947242747929}
   - component: {fileID: 5849919315457507834}
@@ -66,132 +65,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6881456671945813749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312683929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec2d56dcda4d7c14da98c21a9cd526ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Leila
-  skin:
-  - name: Torso
-    skinnedMeshRenderer: {fileID: 2255398782444593198}
-    currentIndex: 0
-  - name: Legs
-    skinnedMeshRenderer: {fileID: 8033615514772960582}
-    currentIndex: 0
-  - name: Feet
-    skinnedMeshRenderer: {fileID: 32152106567125034}
-    currentIndex: 0
-  - name: Hands
-    skinnedMeshRenderer: {fileID: 286930206559253869}
-    currentIndex: 0
-  - name: Hair
-    skinnedMeshRenderer: {fileID: 3779256482355118948}
-    currentIndex: 0
-  - name: BackPack
-    skinnedMeshRenderer: {fileID: 3498461952465849943}
-    currentIndex: 0
-  - name: Outer
-    skinnedMeshRenderer: {fileID: 6900752652807333732}
-    currentIndex: 0
-  - name: Head
-    skinnedMeshRenderer: {fileID: 6829239943146137290}
-    currentIndex: 0
-  - name: Eyes
-    skinnedMeshRenderer: {fileID: 6518482591172100390}
-    currentIndex: 0
-  - name: Mask
-    skinnedMeshRenderer: {fileID: 6939709988316385137}
-    currentIndex: 0
-  clothesTypes:
-  - name: hair
-    clothes:
-    - {fileID: 6444381484501189813, guid: a8a18836cc17423429b6aa0691d86df7, type: 3}
-    - {fileID: 6444381484501189813, guid: fce1760460177b0499834fad723984da, type: 3}
-    - {fileID: 6444381484501189813, guid: a3f2e169b1112704ab430b4862004279, type: 3}
-    - {fileID: 2733079103386727389, guid: dd0d826813b358f488837696acbe918d, type: 3}
-    - {fileID: 6444381484501189813, guid: 797d0e613a9ff714c87907b70a3d32b7, type: 3}
-    - {fileID: 6444381484501189813, guid: 7ebc718879a494844b0bc2d149cb2418, type: 3}
-    - {fileID: 6444381484501189813, guid: f5e5dce7974b06c4d83e18337b5fcbcb, type: 3}
-    - {fileID: 6444381484501189813, guid: 6c3ca28311b37a94eacdd109a85c82c2, type: 3}
-  - name: head
-    clothes:
-    - {fileID: 6566132670930054326, guid: 6e7ec612b7382c54aa61ed3c645b387c, type: 3}
-    - {fileID: 6566132670930054326, guid: dfb72b192aa9f8c4ab283b89c15b9052, type: 3}
-    - {fileID: 6566132670930054326, guid: 8c15c4c4783a6e84da4051ea637aef3f, type: 3}
-    - {fileID: 6566132670930054326, guid: 6c2e23edd40c826408af5fddc86ec297, type: 3}
-  - name: eyes
-    clothes:
-    - {fileID: 6566132670930054326, guid: 477e1b26068976f469a0c43986d03586, type: 3}
-  - name: mask
-    clothes:
-    - {fileID: 6566132670930054326, guid: 282a9d68d9b25ce4990b219a3c255cf4, type: 3}
-    - {fileID: 6566132670930054326, guid: 34fc099a74647f347931ddeaa767c782, type: 3}
-  - name: torso
-    clothes:
-    - {fileID: 796721760300137736, guid: 1d028f1412049b5498c180f4382b5281, type: 3}
-    - {fileID: 6444381484501189813, guid: 95e157fb3a8e6b0409875ac1f4b40bb3, type: 3}
-    - {fileID: 6444381484501189813, guid: 6f16c56a27df0454c94b8749b08729ff, type: 3}
-    - {fileID: 6444381484501189813, guid: ee84055b2a747eb4daf31865d407b0f9, type: 3}
-    - {fileID: 6444381484501189813, guid: da226bc423a0f744bbad494efa68d961, type: 3}
-    - {fileID: 6444381484501189813, guid: ac81121e522713545ae618912b0003de, type: 3}
-    - {fileID: 6444381484501189813, guid: 1abc8e1cac8879e4987e09047dec7cf8, type: 3}
-    - {fileID: 6444381484501189813, guid: 0b3583e2c44a14848b8584ad8a3506bd, type: 3}
-    - {fileID: 6444381484501189813, guid: eb2e887044ce36748a4b4db1dca1b354, type: 3}
-    - {fileID: 6444381484501189813, guid: bc0a68e053ac68b4c84d75401ff1c8f6, type: 3}
-    - {fileID: 6444381484501189813, guid: c92f36f562c9024439ce9e3a5531b9fc, type: 3}
-  - name: outer
-    clothes:
-    - {fileID: 211676144, guid: 8f6eea350bda74147b51ab3bfec1f7ac, type: 3}
-  - name: backPack
-    clothes:
-    - {fileID: 211676144, guid: 2d1e9a5faad56b6448f928b1f78922e3, type: 3}
-    - {fileID: 7425088768729911337, guid: 6e75b9d09c500a042bf8c9c9e48d0657, type: 3}
-    - {fileID: 211676144, guid: 633d5a4b142325f4fa0cb222bbbda852, type: 3}
-    - {fileID: 211676144, guid: 7a33931b29f1cc94184cf5a5033bdf5e, type: 3}
-    - {fileID: 211676144, guid: aa2cc5c6da0a44848b0f3dc0d23ee74a, type: 3}
-  - name: hands
-    clothes:
-    - {fileID: 6444381484501189813, guid: 81f52ad358bd3784f91afd5918d280cb, type: 3}
-    - {fileID: 6444381484501189813, guid: 01b8e732758b0bf43aeb73b5bc1f6123, type: 3}
-    - {fileID: 6444381484501189813, guid: 9d8e0aa9a5d52e64092857bec68cc276, type: 3}
-    - {fileID: 6444381484501189813, guid: 26f1d2c3027df4248a2b2ded92f472b7, type: 3}
-    - {fileID: 6444381484501189813, guid: 935e7447522d81241893727216574061, type: 3}
-    - {fileID: 6444381484501189813, guid: 9d74c73f3e4428e41a1cd5065fbf4672, type: 3}
-    - {fileID: 6444381484501189813, guid: 3ffb4b3c16a528d488e0ea696a2bacbd, type: 3}
-    - {fileID: 6444381484501189813, guid: 1b5d844b463d60848b87c65590b1697f, type: 3}
-    - {fileID: 6444381484501189813, guid: f68feafe311d9eb448ae55eaf47f142e, type: 3}
-  - name: legs
-    clothes:
-    - {fileID: 6444381484501189813, guid: 5ae3fef21021c964a9999b83aa68c18e, type: 3}
-    - {fileID: 6444381484501189813, guid: fb2dfdd68001f674f9625f752fba57bf, type: 3}
-    - {fileID: 6444381484501189813, guid: 9c56d987113888141a151bc4daa34ddd, type: 3}
-    - {fileID: 6444381484501189813, guid: 4814e0265cf58a5449bf7482be893deb, type: 3}
-    - {fileID: 6444381484501189813, guid: 6739028c02965ec4da396c98d6bb0b9b, type: 3}
-    - {fileID: 6444381484501189813, guid: 98a6f849f415ff44988c123ecc9758b8, type: 3}
-    - {fileID: 6444381484501189813, guid: 45367b99d3bb74946b2f556f75bea0c5, type: 3}
-    - {fileID: 6444381484501189813, guid: 001e943c20dfc584ea3cc9f590c080df, type: 3}
-    - {fileID: 6444381484501189813, guid: af2e101e7b4b2814fa4104baa6e37409, type: 3}
-  - name: feets
-    clothes:
-    - {fileID: 6444381484501189813, guid: 0818a8941ac90af4ab8f5793a341eeb3, type: 3}
-    - {fileID: 6444381484501189813, guid: d5054defc0f025949a892487a0a492ed, type: 3}
-    - {fileID: 6444381484501189813, guid: e6d27a3bf6bbe334cb6bc5040ee7ffba, type: 3}
-    - {fileID: 2222571023230106273, guid: 765a96b27f4b6314ab1ebe9b2c5695b7, type: 3}
-    - {fileID: 6444381484501189813, guid: 2bad8c2cac0f4d248baef79f37d0d7fb, type: 3}
-    - {fileID: 6444381484501189813, guid: eb931b8190b3de8429f3bc98aab6475b, type: 3}
-    - {fileID: 6444381484501189813, guid: d4aadb5bc4f471141b18a488a14db32c, type: 3}
-    - {fileID: 6444381484501189813, guid: 197ecbb570e307040a01abac0f638b55, type: 3}
-    - {fileID: 6444381484501189813, guid: 46513fd8679492d4993bb7d39f377b0d, type: 3}
-    - {fileID: 6444381484501189813, guid: 25ad98799d5081448afbf5ecae3c124b, type: 3}
-  CurrentClothes: []
 --- !u!54 &2247734024848276387
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -234,11 +107,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e38bbbd59a3904dac76a83405cec4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Cloth: {fileID: 11400000, guid: 80b449d9c7b5e0f4eb36821cf21943bc, type: 2}
   MoveSpeed: 3
+  turnAngle: 60
   index: 2
   isGrounded: 0
   controllable: 0
-  isWalking: 0
+  Body: {fileID: 2513746376759446664}
+  Hair: {fileID: 328444596961009940}
+  Head: {fileID: 1016065495914439466}
+  Eyes: {fileID: 1787362086101062474}
+  Mask: {fileID: 423432535793233394}
+  Torso: {fileID: 1952852812237021763}
+  Outer: {fileID: 8015153599629885764}
+  Backpack: {fileID: 1199277327163332581}
+  Hands: {fileID: 8288564580696496712}
+  Legs: {fileID: 2725543168435988345}
+  Feets: {fileID: 8597101887298864275}
 --- !u!114 &7867345462119039613
 MonoBehaviour:
   m_ObjectHideFlags: 0

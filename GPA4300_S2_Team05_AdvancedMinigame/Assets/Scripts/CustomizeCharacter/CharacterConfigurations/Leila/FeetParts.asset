@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff53fa7d0e50604489deef54daed0db2, type: 3}
+  m_Name: FeetParts
+  m_EditorClassIdentifier: 
+  Parts:
+  - {fileID: 6444381484501189813, guid: 0818a8941ac90af4ab8f5793a341eeb3, type: 3}
+  - {fileID: 6444381484501189813, guid: d5054defc0f025949a892487a0a492ed, type: 3}
+  - {fileID: 6444381484501189813, guid: e6d27a3bf6bbe334cb6bc5040ee7ffba, type: 3}
+  - {fileID: 2222571023230106273, guid: 765a96b27f4b6314ab1ebe9b2c5695b7, type: 3}
+  - {fileID: 6444381484501189813, guid: 2bad8c2cac0f4d248baef79f37d0d7fb, type: 3}
+  - {fileID: 6444381484501189813, guid: eb931b8190b3de8429f3bc98aab6475b, type: 3}
+  - {fileID: 6444381484501189813, guid: d4aadb5bc4f471141b18a488a14db32c, type: 3}
+  - {fileID: 6444381484501189813, guid: 197ecbb570e307040a01abac0f638b55, type: 3}
+  - {fileID: 6444381484501189813, guid: 46513fd8679492d4993bb7d39f377b0d, type: 3}
+  - {fileID: 6444381484501189813, guid: 25ad98799d5081448afbf5ecae3c124b, type: 3}
+  - {fileID: 0}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff53fa7d0e50604489deef54daed0db2, type: 3}
+  m_Name: LegParts
+  m_EditorClassIdentifier: 
+  Parts:
+  - {fileID: 4880922258833472292, guid: 0cfda01409a46854ab59ee4eb2f1836c, type: 3}
+  - {fileID: 3336802009183864707, guid: f359b594567b6064c97be18dd7b32503, type: 3}
+  - {fileID: 5667165066710959516, guid: 937e09b63f3db5a4780ec823785c884d, type: 3}
+  - {fileID: 2722570221900403165, guid: cd7c176ce7f6ecc40bc4d8328d4bad1f, type: 3}
+  - {fileID: 3266579657450382711, guid: 03bb622ad7d5fc0429882aeae9fdc7e8, type: 3}
+  - {fileID: 5933464411598006576, guid: 4e607c36d9be4e747946ac205fe0e2eb, type: 3}
+  - {fileID: 1547699502684176762, guid: 742675d5ddf196545850d8ef95108459, type: 3}
+  - {fileID: 5406641173500042400, guid: 4302d2c88a724214ab62d6ebfd5c5898, type: 3}
+  - {fileID: 6545988846814379944, guid: a2b3f475e533e1145b0a1148958b2f6b, type: 3}
+  - {fileID: 2109470496302979339, guid: 617e189f0c57b7548a3538078e682de8, type: 3}
+  - {fileID: 8661874092366278349, guid: b5e6b85043965484eb599e922911e74f, type: 3}
+  - {fileID: 0}

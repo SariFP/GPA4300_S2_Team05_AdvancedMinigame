@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff53fa7d0e50604489deef54daed0db2, type: 3}
+  m_Name: HandParts
+  m_EditorClassIdentifier: 
+  Parts:
+  - {fileID: 8336609995807403420, guid: 87ee3fe45beb4524d9da335b45637377, type: 3}
+  - {fileID: 8023038084032584749, guid: 66cc12fb267aeb24298c837c08cac524, type: 3}
+  - {fileID: 2803255406209227826, guid: f815a89187c338343a5d06a6741fe5ab, type: 3}
+  - {fileID: 5683914842200785067, guid: 91ed1dbee47a0914c8cbea21412c3d16, type: 3}
+  - {fileID: 6942277726002829737, guid: 4ca5486890c44684689790bf6c7c6b06, type: 3}
+  - {fileID: 5375874460038331147, guid: 51f68828f1eb0b844a627b0bd198ed6a, type: 3}
+  - {fileID: 3657443188895476685, guid: f6bc6cc625ab132439fd40421fe21db7, type: 3}
+  - {fileID: 6347748551965442251, guid: c5c23548bc3466c44bb901709dc58aaa, type: 3}
+  - {fileID: 5917583192907178202, guid: c067ad3666d8b2c4f94f53587c63bf36, type: 3}
+  - {fileID: 7133864325941949714, guid: 98295a8286ec43a45b19f64bdb7769da, type: 3}
+  - {fileID: 6287458577799591960, guid: 8041798adcc231a43ab7126e924ff61f, type: 3}
+  - {fileID: 0}
