@@ -11,9 +11,6 @@ public class MainMenuManager : MonoBehaviour
     public GameObject OptionsMenu;
     public GameObject StartOptions;
 
-    //[HideInInspector] public bool singlePlayer = false;
-    //[HideInInspector] public bool multiPlayer = false;
-
     [Header("Sounds")]
     [Range(0, 1)]
     public float Volume = 1;
@@ -29,14 +26,12 @@ public class MainMenuManager : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         SceneManager.LoadScene("CustomizeCharacter");
-        //singlePlayer = true;
         PlayerPrefs.SetInt("PlayerChoice", 1);
     }
     public void MultiPlayer()
     {
         AudioSource.PlayClipAtPoint(ClickSound, transform.position, Volume);
         SceneManager.LoadScene("CustomizeCharacter");
-        //multiPlayer = true;
         PlayerPrefs.SetInt("PlayerChoice", 2);
     }
     

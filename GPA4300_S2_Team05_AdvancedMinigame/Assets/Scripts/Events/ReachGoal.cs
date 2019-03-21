@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class ReachGoal : MonoBehaviour
 {
-    [HideInInspector] public PlayerControll playerCntrl;
-
     [Header("GameObjects")]
     public GameObject PlayerLeila;
     public GameObject PlayerDan;
@@ -23,8 +21,8 @@ public class ReachGoal : MonoBehaviour
     public AudioClip GoalSound;
     public AudioClip ClickSound;
 
-    private bool leilaReachedGoal = false;
-    private bool danReachedGoal = false;
+    public bool leilaReachedGoal = false;
+    public bool danReachedGoal = false;
 
     private void OnCollisionEnter(Collision player)
     {
@@ -46,9 +44,22 @@ public class ReachGoal : MonoBehaviour
             AudioSource.PlayClipAtPoint(GoalSound, PlayerDan.transform.position, Volume);
             AudioSource.PlayClipAtPoint(GoalSound, PlayerLeila.transform.position, Volume);
             GoalPanel.SetActive(true);
-            Time.timeScale = 0;
             Cursor.visible = (true);
             Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
+    private void Update()
+    {
+        if (danReachedGoal)
+        {
+            PlayerDan.GetComponent<PlayerControll>().enabled = false;
+            PlayerDan.GetComponent<Animator>().SetFloat("MoveSpeed", 0);
+        }
+        else if (leilaReachedGoal)
+        {
+            PlayerLeila.GetComponent<PlayerControll>().enabled = false;
+            PlayerLeila.GetComponent<Animator>().SetFloat("MoveSpeed", 0);
         }
     }
 

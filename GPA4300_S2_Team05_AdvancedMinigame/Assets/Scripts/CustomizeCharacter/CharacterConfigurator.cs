@@ -55,7 +55,6 @@ public class CharacterConfigurator : MonoBehaviour
         currentHands = HandParts.Parts.Length - 1;
         currentLegs = LegParts.Parts.Length - 1;
         currentFeets = FeetParts.Parts.Length - 1;
-
     }
 
     public void Finish()

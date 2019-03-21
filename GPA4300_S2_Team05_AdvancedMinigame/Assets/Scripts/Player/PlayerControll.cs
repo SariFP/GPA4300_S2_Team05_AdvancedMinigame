@@ -11,13 +11,11 @@ public class PlayerControll : MonoBehaviour
     public float turnAngle;
     public int index;
     Animator anim;
-    //float InputX;
-    //float InputZ;
 
     private Vector3 moveDirection = Vector3.zero;
 
-    /*[HideInInspector]*/ public bool isGrounded;
-    /*[HideInInspector]*/ public bool controllable;
+    [HideInInspector] public bool isGrounded;
+    [HideInInspector] public bool controllable;
 
     [Header("BodyParts")]
     public GameObject Body;
@@ -76,23 +74,17 @@ public class PlayerControll : MonoBehaviour
     {
         if (isGrounded && controllable)
         {
-            float InputX = Input.GetAxis("Horizontal_" + index) * TurnSpeed * Time.deltaTime;
-            float InputZ = Input.GetAxis("Vertical_" + index) * MoveSpeed * Time.deltaTime;
+            float InputX = Input.GetAxis("Horizontal_" + index) * TurnSpeed;
+            float InputZ = Input.GetAxis("Vertical_" + index) * MoveSpeed;
 
             if (Input.GetAxis("Horizontal_" + index) != 0)
             {
-                turnAngle += InputX;
-                transform.eulerAngles = new Vector3(transform.position.x, turnAngle, transform.position.y);
+                turnAngle += (InputX * Time.deltaTime);
+                transform.eulerAngles = new Vector3(0, turnAngle, 0);
             }
-            transform.Translate(0, 0, InputZ);
+            transform.Translate(0f, 0f, InputZ * Time.deltaTime);
+            anim.SetFloat("MoveSpeed", Mathf.Abs(InputZ));
         }
-
-        if (Input.GetAxis("Vertical_" + index) != 0)
-        {
-            anim.SetBool("isWalking", true);
-        }
-        else
-            anim.SetBool("isWalking", false);
 
     }
 
