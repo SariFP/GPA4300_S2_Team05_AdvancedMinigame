@@ -5,14 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameModeManager : MonoBehaviour
 {
-    //[HideInInspector] public MainMenuManager mainMenuManager;
     public GameObject OneScreen;
     public GameObject SplitScreen;
-
-    private void Start()
-    {
-        //mainMenuManager.MainMenu.GetComponent<MainMenuManager>();
-    }
 
     private void Update()
     {
