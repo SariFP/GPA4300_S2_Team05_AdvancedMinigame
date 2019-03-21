@@ -109,7 +109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cloth: {fileID: 11400000, guid: 80b449d9c7b5e0f4eb36821cf21943bc, type: 2}
   MoveSpeed: 3
-  turnAngle: 60
+  TurnSpeed: 150
+  turnAngle: 6
   index: 2
   isGrounded: 0
   controllable: 0

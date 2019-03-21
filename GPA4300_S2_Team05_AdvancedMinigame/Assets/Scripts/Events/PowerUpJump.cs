@@ -37,14 +37,21 @@ public class PowerUpJump : MonoBehaviour
         {
             PlayerLeila.GetComponent<Rigidbody>().AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
             AudioSource.PlayClipAtPoint(JumpSound, PlayerLeila.transform.position, Volume);
-            PlayerLeila.GetComponent<Animator>().SetTrigger("Jump");
+            //PlayerLeila.GetComponent<Animator>().SetTrigger("Jump");
+            PlayerLeila.GetComponent<Animator>().SetBool("hasJumped", true);
 
         }
         else if (danCanJump && Input.GetButtonDown("Jump"))
         {
             PlayerDan.GetComponent<Rigidbody>().AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
             AudioSource.PlayClipAtPoint(JumpSound, PlayerDan.transform.position, Volume);
-            PlayerDan.GetComponent<Animator>().SetTrigger("Jump");
+            //PlayerDan.GetComponent<Animator>().SetTrigger("Jump");
+            PlayerDan.GetComponent<Animator>().SetBool("hasJumped", true);
+        }
+        else
+        {
+            PlayerLeila.GetComponent<Animator>().SetBool("hasJumped", false);
+            PlayerDan.GetComponent<Animator>().SetBool("hasJumped", false);
         }
     }
 }
