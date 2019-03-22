@@ -265,7 +265,7 @@ public class CharacterConfigurator : MonoBehaviour
         if (currentFeets == FeetParts.Parts.Length - 1)
             currentFeets = 0;
         else
-            currentLegs++;
+            currentFeets++;
 
         Feets.GetComponent<SkinnedMeshRenderer>().sharedMesh = FeetParts.Parts[currentFeets].GetComponent<MeshFilter>().sharedMesh;
         Feets.GetComponent<SkinnedMeshRenderer>().sharedMaterial = FeetParts.Parts[currentFeets].GetComponent<MeshRenderer>().sharedMaterial;

@@ -14,8 +14,8 @@ public class CameraSwitch : MonoBehaviour
         if (Input.GetButtonDown("CameraSwitch"))
         {
             camSwitch = !camSwitch;
-            DanCam.SetActive(camSwitch);
-            LeilaCam.SetActive(!camSwitch);
+            DanCam.SetActive(!camSwitch);
+            LeilaCam.SetActive(camSwitch);
         }
     }
 }

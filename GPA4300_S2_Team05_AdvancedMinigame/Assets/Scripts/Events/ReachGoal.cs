@@ -56,7 +56,8 @@ public class ReachGoal : MonoBehaviour
             PlayerDan.GetComponent<PlayerControll>().enabled = false;
             PlayerDan.GetComponent<Animator>().SetFloat("MoveSpeed", 0);
         }
-        else if (leilaReachedGoal)
+
+        if (leilaReachedGoal)
         {
             PlayerLeila.GetComponent<PlayerControll>().enabled = false;
             PlayerLeila.GetComponent<Animator>().SetFloat("MoveSpeed", 0);
